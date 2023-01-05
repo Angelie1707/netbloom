@@ -76,6 +76,7 @@ header {
 
     a{
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         color: $parText;
     }
@@ -88,6 +89,7 @@ header {
     
         ul {
             display: flex;
+            flex-wrap: wrap;
             justify-content: flex-end;
             padding: 5px 0;
 
@@ -108,6 +110,7 @@ header {
 
 .navbar{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -115,6 +118,7 @@ header {
 
     a{
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         color: $parText;
     }
@@ -125,12 +129,14 @@ header {
 
     .nav-right{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
 
         .main-nav{
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
         }
         

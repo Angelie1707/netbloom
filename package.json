@@ -1,7 +1,7 @@
 {
   "name": "netbloom",
   "version": "0.1.0",
-  "homepage": "https://jessanetbloom.github.io/netbloom",
+  "homepage": "https://jessanetbloom.github.io",
   "private": true,
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",

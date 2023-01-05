@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/netbloom/static/css/main.02345402.css",
+    "main.js": "/netbloom/static/js/main.ac93abbb.js",
+    "static/js/787.33f16974.chunk.js": "/netbloom/static/js/787.33f16974.chunk.js",
+    "static/media/digital-marketing-services-dunedin.webp": "/netbloom/static/media/digital-marketing-services-dunedin.e1ed9963501515368f8a.webp",
+    "static/media/Logo-1.webp": "/netbloom/static/media/Logo-1.a0aededc84097aa12e2d.webp",
+    "index.html": "/netbloom/index.html",
+    "main.02345402.css.map": "/netbloom/static/css/main.02345402.css.map",
+    "main.ac93abbb.js.map": "/netbloom/static/js/main.ac93abbb.js.map",
+    "787.33f16974.chunk.js.map": "/netbloom/static/js/787.33f16974.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02345402.css",
+    "static/js/main.ac93abbb.js"
+  ]
+}
