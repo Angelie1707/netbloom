@@ -1,4 +1,5 @@
 // Colors
+$white: #fff;
 $LogoPurple: #6b1ece;
 $LogoBlue: #5d81fb;
 $Green: #4ed199;
@@ -6,3 +7,162 @@ $Orange: #ff6c5f;
 $NewBlue: #004AAC;
 $NewDarkBlue: #040040;
 $NewPurple: #5c81fa;
+$parText: #333;
+
+// Box Shadow
+$headerShadow1: 0px 4px 10px rgba(0, 0, 0, 0.05);
+$btnShadow1: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+// Text Shadow
+$h1TextShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$btnTextShadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+
+// Backgrounds
+$logoGradientRight: linear-gradient(93.06deg, #5C81FA 0.55%, #6B1ECE 99.25%);
+
+// Global
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+   color: $parText; 
+}
+
+.App{
+    position: relative;
+}
+
+.main-content{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header{
+    background: #fff;
+    left: 0;
+    right: 0;
+    box-shadow: $headerShadow1;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+}
+
+// Buttons
+.gradientButton1{
+    background: $logoGradientRight;
+    box-shadow: $btnShadow1;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 20px;
+    text-shadow: $btnTextShadow;
+    color: $white;
+    font-weight: 600;
+}
+
+// Header
+header {
+    top:-35px!important;
+
+    a{
+        display: flex;
+        align-items: center;
+        color: $parText;
+    }
+}
+
+.tob-bar{
+    background-color: $Green;
+
+    .right {
+    
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            padding: 5px 0;
+
+            li {
+                padding: 0 0 0 50px;
+
+                a{
+                    color: $white;
+
+                    svg{
+                        margin: 0 5px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    a{
+        display: flex;
+        align-items: center;
+        color: $parText;
+    }
+    
+    .logo{
+        max-width: 200px;
+    }
+
+    .nav-right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .main-nav{
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        a{
+            margin: 0 15px;
+        }
+    }
+}
+
+// Home
+.banner{
+
+    .banner-overlay{
+        background-color: #ffffffa1;
+        padding: 100px 0;
+
+        .banner-con{
+            max-width: 700px;
+            margin: 0 auto;
+
+            h1{
+                font-weight: 800;
+                font-size: 55px;
+                text-align: center;
+                color: $NewDarkBlue;
+                text-shadow: $h1TextShadow;
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+        }
+    }
+}
