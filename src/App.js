@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar.js";
 import AllArticles from "./components/AllArticles.js";
 import OneArticle from "./components/OneArticle.js";
 import './App.css';
-// import './Global.scss';
+import './Global.scss';
 
 const App = () => {
   return (
