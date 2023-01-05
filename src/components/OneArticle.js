@@ -1,5 +1,3 @@
-// src/components/OnePost.js
-
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
@@ -11,8 +9,8 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-export default function OnePost() {
-  const [postData, setPostData] = useState(null);
+export default function OneArticle() {
+  const [articleData, setArticleData] = useState(null);
   const { slug } = useParams();
 
   useEffect(() => {
@@ -33,28 +31,28 @@ export default function OnePost() {
        }`,
         { slug }
       )
-      .then((data) => setPostData(data[0]))
+      .then((data) => setArticleData(data[0]))
       .catch(console.error);
   }, [slug]);
 
-  if (!postData) return <div>Loading...</div>;
+  if (!articleData) return <div>Loading...</div>;
 
   return (
     <div>
       <div>
-        <h2>{postData.title}</h2>
+        <h2>{articleData.title}</h2>
         <div>
           <img
-            src={urlFor(postData.authorImage).width(100).url()}
+            src={urlFor(articleData.authorImage).width(100).url()}
             alt="Author is Kap"
           />
-          <h4>{postData.name}</h4>
+          <h4>{articleData.name}</h4>
         </div>
       </div>
-      <img src={urlFor(postData.mainImage).width(200).url()} alt="" />
+      <img src={urlFor(articleData.mainImage).width(200).url()} alt="" />
       <div>
         <BlockContent
-          blocks={postData.body}
+          blocks={articleData.body}
           projectId={sanityClient.clientConfig.projectId}
           dataset={sanityClient.clientConfig.dataset}
         />

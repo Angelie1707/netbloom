@@ -1,16 +1,14 @@
-// src/components/AllPosts.js
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 
-export default function AllPosts() {
-  const [allPostsData, setAllPosts] = useState(null);
+export default function AllArticles() {
+  const [allArticlesData, setAllArticles] = useState(null);
 
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"]{
+        `*[_type == "article"]{
         title,
         slug,
         mainImage{
@@ -21,7 +19,7 @@ export default function AllPosts() {
       }
     }`
       )
-      .then((data) => setAllPosts(data))
+      .then((data) => setAllArticles(data))
       .catch(console.error);
   }, []);
 
@@ -30,13 +28,13 @@ export default function AllPosts() {
       <h2>Blog Posts</h2>
       <h3>Welcome to my blog posts page!</h3>
       <div>
-        {allPostsData &&
-          allPostsData.map((post, index) => (
-            <Link to={"/" + post.slug.current} key={post.slug.current}>
+        {allArticlesData &&
+          allArticlesData.map((article, index) => (
+            <Link to={"/" + article.slug.current} key={article.slug.current}>
               <span key={index}>
-                <img src={post.mainImage.asset.url} alt="" />
+                <img src={article.mainImage.asset.url} alt="" />
                 <span>
-                  <h2>{post.title}</h2>
+                  <h2>{article.title}</h2>
                 </span>
               </span>
             </Link>

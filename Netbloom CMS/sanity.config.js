@@ -5,9 +5,9 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'Blog',
+  title: 'Netbloom CMS',
 
-  projectId: '4fd4aplv',
+  projectId: 'mjyehiv5',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
