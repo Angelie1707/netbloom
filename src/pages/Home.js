@@ -1,6 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import bannerBg from '../assets/images/digital-marketing-services-dunedin.webp';
+import AllBlog from "../components/AllBlog.js";
 
 const banner = {
   backgroundImage: `url(${bannerBg})`,
@@ -9,7 +10,7 @@ const banner = {
   backgroundRepeat: 'no-repeat',
 };
 
-export default function AllArticles() {
+export default function Home() {
   return (
     <div className="Home">
       <div className="banner" style={banner}>
@@ -21,6 +22,9 @@ export default function AllArticles() {
             </div>
           </div>
         </div>
+      </div>
+      <div class="sec2">
+        <AllBlog/>
       </div>
     </div>
   );

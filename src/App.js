@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from "./pages/Home.js";
 import Navbar from "./components/Navbar.js";
-import AllArticles from "./components/AllArticles.js";
-import OneArticle from "./components/OneArticle.js";
+import AllBlog from "./components/AllBlog.js";
+import SingleBlog from "./components/SingleBlog.js";
 import './App.css';
 import './Global.scss';
 
@@ -14,8 +14,8 @@ const App = () => {
         <Navbar/>
         <Routes>
           <Route element={<Home/>} path="/" exact />
-          <Route element={<AllArticles/>} path="/blog" />
-          <Route element={<OneArticle/>} path="/:slug" />
+          <Route element={<AllBlog/>} path="/blog" />
+          <Route element={<SingleBlog/>} path="/:slug" />
         </Routes>
       </Router>
     </div>
