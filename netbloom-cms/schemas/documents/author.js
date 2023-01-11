@@ -6,13 +6,13 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'name',
       title: 'Name',
+      name: 'name',
       type: 'string',
     }),
     defineField({
-      name: 'slug',
       title: 'Slug',
+      name: 'slug',
       type: 'slug',
       options: {
         source: 'name',
@@ -20,16 +20,16 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'image',
       title: 'Image',
+      name: 'image',
       type: 'image',
       options: {
         hotspot: true,
       },
     }),
     defineField({
-      name: 'bio',
       title: 'Bio',
+      name: 'bio',
       type: 'array',
       of: [
         {

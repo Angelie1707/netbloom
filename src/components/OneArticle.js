@@ -9,8 +9,8 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-export default function OneArticle() {
-  const [articleData, setArticleData] = useState(null);
+export default function OneBlog() {
+  const [blogData, setBlogData] = useState(null);
   const { slug } = useParams();
 
   useEffect(() => {
@@ -31,28 +31,28 @@ export default function OneArticle() {
        }`,
         { slug }
       )
-      .then((data) => setArticleData(data[0]))
+      .then((data) => setBlogData(data[0]))
       .catch(console.error);
   }, [slug]);
 
-  if (!articleData) return <div>Loading...</div>;
+  if (!blogData) return <div>Loading...</div>;
 
   return (
     <div>
       <div>
-        <h2>{articleData.title}</h2>
+        <h2>{blogData.title}</h2>
         <div>
           <img
-            src={urlFor(articleData.authorImage).width(100).url()}
+            src={urlFor(blogData.authorImage).width(100).url()}
             alt="Author is Kap"
           />
-          <h4>{articleData.name}</h4>
+          <h4>{blogData.name}</h4>
         </div>
       </div>
-      <img src={urlFor(articleData.mainImage).width(200).url()} alt="" />
+      <img src={urlFor(blogData.mainImage).width(200).url()} alt="" />
       <div>
         <BlockContent
-          blocks={articleData.body}
+          blocks={blogData.body}
           projectId={sanityClient.clientConfig.projectId}
           dataset={sanityClient.clientConfig.dataset}
         />

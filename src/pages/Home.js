@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import bannerBg from '../assets/images/digital-marketing-services-dunedin.webp';
 
 const banner = {

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 
-export default function AllArticles() {
-  const [allArticlesData, setAllArticles] = useState(null);
+export default function AllBlog() {
+  const [allBlogData, setAllBlog] = useState(null);
 
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "article"]{
+        `*[_type == "blog"]{
         title,
         slug,
         mainImage{
@@ -19,7 +19,7 @@ export default function AllArticles() {
       }
     }`
       )
-      .then((data) => setAllArticles(data))
+      .then((data) => setAllBlog(data))
       .catch(console.error);
   }, []);
 
@@ -28,13 +28,13 @@ export default function AllArticles() {
       <h2>Blog Posts</h2>
       <h3>Welcome to my blog posts page!</h3>
       <div>
-        {allArticlesData &&
-          allArticlesData.map((article, index) => (
-            <Link to={"/" + article.slug.current} key={article.slug.current}>
+        {allBlogData &&
+          allBlogData.map((blog, index) => (
+            <Link to={"/" + blog.slug.current} key={blog.slug.current}>
               <span key={index}>
-                <img src={article.mainImage.asset.url} alt="" />
+                <img src={blog.mainImage.asset.url} alt="" />
                 <span>
-                  <h2>{article.title}</h2>
+                  <h2>{blog.title}</h2>
                 </span>
               </span>
             </Link>

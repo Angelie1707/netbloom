@@ -11,8 +11,8 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'slug',
       title: 'Slug',
+      name: 'slug',
       type: 'slug',
       options: {
         source: 'title',
@@ -33,8 +33,8 @@ export default defineType({
         },
     }),
     defineField({
-      name: 'mainImage',
       title: 'Main image',
+      name: 'mainImage',
       type: 'image',
       options: {
         hotspot: true,

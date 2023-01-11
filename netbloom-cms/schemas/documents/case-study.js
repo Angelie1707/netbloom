@@ -11,8 +11,8 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'slug',
       title: 'Slug',
+      name: 'slug',
       type: 'slug',
       options: {
         source: 'title',
@@ -20,14 +20,14 @@ export default defineType({
       }
     }),
     defineField({
-      name: 'author',
       title: 'Author',
+      name: 'author',
       type: 'reference',
       to: {type: 'author'},
     }),
     defineField({
-      name: 'publishedAt',
       title: 'Published at',
+      name: 'publishedAt',
       type: 'datetime',
     }),
     defineField({
@@ -46,8 +46,8 @@ export default defineType({
         },
     }),
     defineField({
-      name: 'mainImage',
       title: 'Main image',
+      name: 'mainImage',
       type: 'image',
       options: {
         hotspot: true,

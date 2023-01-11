@@ -1,14 +1,20 @@
-import createSchema from 'part:@sanity/base/schema-creator'
-import schemaTypes from 'all:part:@sanity/base/schema-type'
-import casestudy from './documents/case-study' 
-import article from './documents/article'
-import author from './documents/author'
+import createSchema from 'part:@sanity/base/schema-creator';
+import schemaTypes from 'all:part:@sanity/base/schema-type';
+import casestudy from './documents/case-study';
+import blog from './documents/blog';
+import portfolio from './documents/portfolio';
+import faqs from './documents/faqs';
+import testimonial from './documents/testimonial';
+import author from './documents/author';
 
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
-    article,
+    blog,
     casestudy,
+    portfolio,
+    testimonial,
+    faqs,
     author,
   ])
 })
