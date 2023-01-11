@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/netbloom/static/css/main.02345402.css",
-    "main.js": "/netbloom/static/js/main.ac93abbb.js",
-    "static/js/787.33f16974.chunk.js": "/netbloom/static/js/787.33f16974.chunk.js",
-    "static/media/digital-marketing-services-dunedin.webp": "/netbloom/static/media/digital-marketing-services-dunedin.e1ed9963501515368f8a.webp",
-    "static/media/Logo-1.webp": "/netbloom/static/media/Logo-1.a0aededc84097aa12e2d.webp",
-    "index.html": "/netbloom/index.html",
-    "main.02345402.css.map": "/netbloom/static/css/main.02345402.css.map",
-    "main.ac93abbb.js.map": "/netbloom/static/js/main.ac93abbb.js.map",
-    "787.33f16974.chunk.js.map": "/netbloom/static/js/787.33f16974.chunk.js.map"
+    "main.css": "/static/css/main.b9eeffcb.css",
+    "main.js": "/static/js/main.c6a688a1.js",
+    "static/js/787.33f16974.chunk.js": "/static/js/787.33f16974.chunk.js",
+    "static/media/digital-marketing-services-dunedin.webp": "/static/media/digital-marketing-services-dunedin.e1ed9963501515368f8a.webp",
+    "static/media/Logo-1.webp": "/static/media/Logo-1.a0aededc84097aa12e2d.webp",
+    "index.html": "/index.html",
+    "main.b9eeffcb.css.map": "/static/css/main.b9eeffcb.css.map",
+    "main.c6a688a1.js.map": "/static/js/main.c6a688a1.js.map",
+    "787.33f16974.chunk.js.map": "/static/js/787.33f16974.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02345402.css",
-    "static/js/main.ac93abbb.js"
+    "static/css/main.b9eeffcb.css",
+    "static/js/main.c6a688a1.js"
   ]
 }

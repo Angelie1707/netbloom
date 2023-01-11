@@ -6,6 +6,7 @@ import {schemaTypes} from './schemas'
 export default defineConfig({
   name: 'default',
   title: 'Netbloom CMS',
+  basePath: '/studio',
 
   projectId: 'mjyehiv5',
   dataset: 'production',
