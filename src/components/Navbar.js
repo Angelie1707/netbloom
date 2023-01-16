@@ -32,19 +32,19 @@ export default function Navbar() {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/blog">Websites</Link>
+                  <Link to="/web-design-nz">Websites</Link>
                 </li>
                 <li>
-                  <Link to="/blog">About</Link>
+                  <Link to="/about-us">About</Link>
                 </li>
                 <li>
                   <Link to="/blog">Blog</Link>
                 </li>
                 <li>
-                  <Link to="/blog">Contact Us</Link>
+                  <Link to="/contact-us">Contact Us</Link>
                 </li>
               </ul>
-              <button className="gradientButton1">Get a Quote</button>
+              <button className="gradientButton1 btn">Get a Quote</button>
             </div>
           </div>
         </div>

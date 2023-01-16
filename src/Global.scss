@@ -28,10 +28,23 @@ $logoGradientRight: linear-gradient(93.06deg, #5C81FA 0.55%, #6B1ECE 99.25%);
 
 p{
    color: $parText; 
+   margin: 8px 0;
 }
 
 .App{
     position: relative;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.col-100 {
+    width: 100%;
+}
+.col-50 {
+    width: 49%;
 }
 
 .main-content{
@@ -60,8 +73,7 @@ header{
 }
 
 // Buttons
-.gradientButton1{
-    background: $logoGradientRight;
+.btn{
     box-shadow: $btnShadow1;
     border-radius: 5px;
     border: none;
@@ -69,6 +81,12 @@ header{
     text-shadow: $btnTextShadow;
     color: $white;
     font-weight: 600;
+}
+.gradientButton1{
+    background: $logoGradientRight;
+}
+.greenButton{
+    background: $Green;
 }
 
 // Header
@@ -139,6 +157,29 @@ header {
             margin: 0 15px;
         }
     }
+}
+
+// CTA Form
+.cta-wrap{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: $LogoPurple;
+    
+    #cta-form .MuiFormControl-root {
+        width: 100%;
+    }
+
+    .MuiInput-root, h3, p{
+        color: $white;
+    }
+
+    .MuiInput-root:after, .MuiInput-root:before{
+        border-color: $white;
+    }
+    
+    
 }
 
 // Home

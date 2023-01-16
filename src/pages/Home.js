@@ -1,7 +1,7 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import bannerBg from '../assets/images/digital-marketing-services-dunedin.webp';
 import AllBlog from "../components/AllBlog.js";
+import CtaForm from "../components/CtaForm.js";
 
 const banner = {
   backgroundImage: `url(${bannerBg})`,
@@ -23,9 +23,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div class="sec2">
-        <AllBlog/>
-      </div>
+      <CtaForm/>
+      <AllBlog/>
     </div>
   );
 }
