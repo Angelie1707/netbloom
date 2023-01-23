@@ -29,7 +29,7 @@ export default function AllBlog() {
           <div className="default-sec-content">
             <div className="default-sec-wrap">
               <h2>Blog Posts</h2>
-              <h3>Welcome to my blog posts page!</h3>
+              <p className="sub-head">Welcome to my blog posts page!</p>
               <div>
                 {allBlogData &&
                   allBlogData.map((blog, index) => (
@@ -37,7 +37,7 @@ export default function AllBlog() {
                       <span key={index}>
                         <img src={blog.mainImage.asset.url} alt="" />
                         <span>
-                          <h2>{blog.title}</h2>
+                          <h1>{blog.title}</h1>
                         </span>
                       </span>
                     </Link>

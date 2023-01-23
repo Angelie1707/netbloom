@@ -31,6 +31,23 @@ p{
    margin: 8px 0;
 }
 
+h2, h3{
+    font-size: 35px;
+    color: $NewDarkBlue;
+}
+
+.sub-head{
+    color: $Green;
+}
+
+.bg-sec h2{
+    color: $white;
+}
+
+.default-sec{
+    margin: 80px 0;
+}
+
 .App{
     position: relative;
 }
@@ -55,13 +72,6 @@ p{
     padding-right: 20px;
 }
 
-header{
-    background: #fff;
-    left: 0;
-    right: 0;
-    box-shadow: $headerShadow1;
-}
-
 .sticky{
     position: sticky;
     top: 0;
@@ -70,6 +80,11 @@ header{
 .fixed{
     position: fixed;
     top: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
 }
 
 // Buttons
@@ -90,9 +105,15 @@ header{
 }
 
 // Header
-header {
-    top:-35px!important;
 
+header{
+    background: #fff;
+    left: 0;
+    right: 0;
+    box-shadow: $headerShadow1;
+    z-index: 999;
+    top:-40px!important;
+    
     a{
         display: flex;
         align-items: center;
@@ -156,6 +177,10 @@ header {
         a{
             margin: 0 15px;
         }
+
+        .btn{
+            margin-left: 20px;
+        }
     }
 }
 
@@ -171,16 +196,72 @@ header {
         width: 100%;
     }
 
-    .MuiInput-root, h3, p{
+    .MuiInput-root, h3, p, label{
         color: $white;
     }
 
     .MuiInput-root:after, .MuiInput-root:before{
-        border-color: $white;
+        border-color: $white!important;
+    }   
+    
+    .btn{
+        margin-top: 30px;
     }
     
+}
+
+.ctaform-section {
+    margin-top: -140px;
+}
+
+.cta-wrap label.Mui-focused {
+    color: #fff;
+    padding-top: 8px;
+    opacity: .8
+}
+
+.MuiGrid-root{
+    margin-top: 0!important;
+}
+
+
+// Testimonial
+
+.carousel{
+
+    .slide-item{
+        border: 1px solid $Green;
+        padding: 40px;
+        margin: 20px;
+        text-align: left;
+
+        img {
+            width: 150px;
+            margin-right: 20px;
+        }
+
+        .name{
+
+            border-left: 1px solid #ccc;
+            padding: 20px;
+
+            p{
+                margin: 0;
+                font-weight: 600;
+            }
+    
+            h4{
+                color: $LogoPurple;
+                font-style: italic;
+                font-weight: normal;
+                font-size: 14px;
+            }
+        }
+
+    }
     
 }
+
 
 // Home
 .banner{
@@ -206,5 +287,11 @@ header {
             }
 
         }
+    }
+}
+
+.Home{
+    .banner .banner-overlay{
+        padding: 100px 0 200px 0;
     }
 }

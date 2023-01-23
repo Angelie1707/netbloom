@@ -4,6 +4,7 @@ import Home from "./pages/Home.js";
 import Navbar from "./components/Navbar.js";
 import AllBlog from "./components/AllBlog.js";
 import SingleBlog from "./components/SingleBlog.js";
+import AllTestimonials from "./components/AllTestimonials.js";
 import './App.css';
 import './Global.scss';
 
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route element={<Home/>} path="/" exact />
           <Route element={<AllBlog/>} path="/blog" />
+          <Route element={<AllTestimonials/>} path="/testimonials" />
           <Route element={<SingleBlog/>} path="/:slug" />
         </Routes>
       </Router>

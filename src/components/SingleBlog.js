@@ -53,8 +53,8 @@ export default function OneBlog() {
       <div>
         <BlockContent
           blocks={blogData.body}
-          projectId={sanityClient.clientConfig.projectId}
-          dataset={sanityClient.clientConfig.dataset}
+          projectId={sanityClient.projectId}
+          dataset={sanityClient.dataset}
         />
       </div>
     </div>

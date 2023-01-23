@@ -29,7 +29,7 @@ export default function App() {
                     <TextField
                       select
                       label="Services Your Are Interested In"
-                      {...register("Services Your Are Interested In", {required: true})}
+                      {...register("services", {required: true})}
                       variant="standard"
                     >
                       <option value="webdesign">Website Design & Development</option>
