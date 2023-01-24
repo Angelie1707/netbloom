@@ -121,6 +121,10 @@ h2, h3{
     align-items: stretch;
 }
 
+.MuiSelect-select {
+    text-align: left;
+}
+
 // Buttons
 .btn{
     box-shadow: $btnShadow1;
