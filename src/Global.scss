@@ -21,14 +21,31 @@ $btnTextShadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 // Backgrounds
 $logoGradientRight: linear-gradient(93.06deg, #5C81FA 0.55%, #6B1ECE 99.25%);
 
+// Animations
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin{
+    animation: spin infinite 20s linear;
+}
+
+
 // Global
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif!important;
+    line-height: 1.4;
 }
 
 p{
    color: $parText; 
    margin: 8px 0;
+   font-weight: 300;
 }
 
 h2, h3{
@@ -40,12 +57,23 @@ h2, h3{
     color: $Green;
 }
 
-.bg-sec h2{
-    color: $white;
+.bg-sec {
+
+    padding: 80px 0;
+
+    h2{
+        color: $white;
+    }
+
+    .sub-head{
+        color: $white;
+    }
 }
 
 .default-sec{
     margin: 80px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .App{
@@ -85,6 +113,12 @@ h2, h3{
 .flex {
     display: flex;
     align-items: center;
+}
+
+.MuiGrid-root{
+    margin-top: 0!important;
+    display: flex;
+    align-items: stretch;
 }
 
 // Buttons
@@ -185,12 +219,27 @@ header{
 }
 
 // CTA Form
+.ctaform-section {
+    margin-top: -140px;
+}
+
 .cta-wrap{
     max-width: 700px;
     margin: 0 auto;
     padding: 40px;
     border-radius: 20px;
     background-color: $LogoPurple;
+
+    label{
+        opacity: .7;
+        font-weight: 300;
+    }
+
+    label.Mui-focused {
+        color: #fff;
+        padding-top: 8px;
+        opacity: .6;
+    }
     
     #cta-form .MuiFormControl-root {
         width: 100%;
@@ -210,20 +259,6 @@ header{
     
 }
 
-.ctaform-section {
-    margin-top: -140px;
-}
-
-.cta-wrap label.Mui-focused {
-    color: #fff;
-    padding-top: 8px;
-    opacity: .8
-}
-
-.MuiGrid-root{
-    margin-top: 0!important;
-}
-
 
 // Testimonial
 
@@ -234,6 +269,7 @@ header{
         padding: 40px;
         margin: 20px;
         text-align: left;
+        min-height: 270px;
 
         img {
             width: 150px;
@@ -294,4 +330,46 @@ header{
     .banner .banner-overlay{
         padding: 100px 0 200px 0;
     }
+}
+
+.results-driven{
+    h3{
+        font-size: 24px;
+        color: $NewBlue;
+    }
+}
+
+.why-trust{
+    background: linear-gradient(180deg, #040040 0%, #440892 100%), #040040;
+
+    .grid-item{
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(5px);
+        padding: 40px;
+
+        h4{
+            color: $Green;
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        p{
+            color: $white;
+        }
+    }
+
+    .net-img{
+        position: absolute;
+    }
+
+    .net-img.top-left{
+        top: -5%;
+        left: -5%;
+    }
+
+    .net-img.bot-right{
+        bottom: -5%;
+        right: -5%;
+    }
+
 }

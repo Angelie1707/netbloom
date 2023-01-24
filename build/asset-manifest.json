@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.b9eeffcb.css",
-    "main.js": "/static/js/main.c6a688a1.js",
+    "main.css": "/static/css/main.3b705a18.css",
+    "main.js": "/static/js/main.cb294ed6.js",
     "static/js/787.33f16974.chunk.js": "/static/js/787.33f16974.chunk.js",
     "static/media/digital-marketing-services-dunedin.webp": "/static/media/digital-marketing-services-dunedin.e1ed9963501515368f8a.webp",
+    "static/media/target.webp": "/static/media/target.28694f46618d329899a1.webp",
     "static/media/Logo-1.webp": "/static/media/Logo-1.a0aededc84097aa12e2d.webp",
+    "static/media/statistics.webp": "/static/media/statistics.446b315757a6b4f6eb29.webp",
+    "static/media/graphic-design.webp": "/static/media/graphic-design.52e1ee38ad6721070ce8.webp",
     "index.html": "/index.html",
-    "main.b9eeffcb.css.map": "/static/css/main.b9eeffcb.css.map",
-    "main.c6a688a1.js.map": "/static/js/main.c6a688a1.js.map",
+    "main.3b705a18.css.map": "/static/css/main.3b705a18.css.map",
+    "main.cb294ed6.js.map": "/static/js/main.cb294ed6.js.map",
     "787.33f16974.chunk.js.map": "/static/js/787.33f16974.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9eeffcb.css",
-    "static/js/main.c6a688a1.js"
+    "static/css/main.3b705a18.css",
+    "static/js/main.cb294ed6.js"
   ]
 }

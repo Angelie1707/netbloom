@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import BlockContent from "@sanity/block-content-to-react";
+// import BlockContent from "@sanity/block-content-to-react";
+import ReadMoreReact from 'read-more-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 export default function AllTestimonials() {
   const [allTestimonialsData, setAllTestimonials] = useState(null);
@@ -13,7 +14,7 @@ export default function AllTestimonials() {
       .fetch(
         `*[_type == "testimonial"]{
         client,
-        text,
+        clientTestimonial,
         fullName,
         position,
         website,
@@ -35,15 +36,21 @@ export default function AllTestimonials() {
         <div className="default-sec-overlay">
           <div className="default-sec-content">
             <div className="default-sec-wrap">
-              <Carousel infiniteLoop centerMode={true} swipeable={true} showThumbs={false} centerSlidePercentage='60' showArrows={false} showIndicators={false} showStatus={false} emulateTouch={true}>
+            <Swiper
+              className="carousel"
+              spaceBetween={20}
+              slidesPerView={3}
+              loop={true}
+            >
                 {allTestimonialsData &&
                   allTestimonialsData.map((testimonial, index) => (
-                    <div key={index} className="slide-item">
+                    <SwiperSlide key={index} className="slide-item">
                       <p>
-                        <BlockContent
-                          blocks={testimonial.text}
-                          projectId={sanityClient.projectId}
-                          dataset={sanityClient.dataset}
+                        <ReadMoreReact text={testimonial.clientTestimonial}
+                          min={200}
+                          ideal={250}
+                          max={300}
+                          readMoreText={'read more...'}
                         />
                       </p>
                       <div className="flex">
@@ -55,9 +62,9 @@ export default function AllTestimonials() {
                           <h4><a href={testimonial.website} target="_blank" rel="noreferrer">{testimonial.client}</a></h4>
                         </span>
                       </div>
-                    </div>
+                    </SwiperSlide>
                 ))}
-              </Carousel>
+              </Swiper>
           </div>
         </div>
       </div>
