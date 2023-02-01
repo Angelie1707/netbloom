@@ -41,6 +41,7 @@ export default defineType({
           {value: 'sem', title: 'SEM'},
           {value: 'guides', title: 'Guides'},
           {value: 'branding', title: 'Branding'},
+          {value: 'webdesign', title: 'Web Design'}
           ],
           layout: 'radio'
         },

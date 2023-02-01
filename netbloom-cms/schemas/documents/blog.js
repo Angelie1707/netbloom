@@ -4,6 +4,12 @@ export default defineType({
   title: 'Blog',
   name: 'blog',
   type: 'document',
+  groups: [
+    {
+      name: 'seo',
+      title: 'SEO',
+    },
+  ],
   fields: [
     defineField({
       title: 'Title',
@@ -41,6 +47,7 @@ export default defineType({
           {value: 'sem', title: 'SEM'},
           {value: 'guides', title: 'Guides'},
           {value: 'branding', title: 'Branding'},
+          {value: 'webdesign', title: 'Web Design'}
           ],
           layout: 'radio'
         },
