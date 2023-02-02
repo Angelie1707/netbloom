@@ -18,6 +18,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.42.1",
     "react-icons": "^4.7.1",
+    "react-pwa-install-ios": "^1.4.3",
     "react-router-dom": "^6.6.1",
     "react-scripts": "^5.0.1",
     "read-more-react": "^1.0.10",
@@ -53,7 +54,11 @@
     ]
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.13",
     "gh-pages": "^3.2.3",
-    "react-dev-utils": "^12.0.1"
+    "postcss": "^8.4.21",
+    "react-dev-utils": "^12.0.1",
+    "tailwindcss": "^3.2.4"
   }
 }

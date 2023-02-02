@@ -1,5 +1,6 @@
 import React from "react";
 import Grid from '@mui/material/Grid';
+import {Helmet} from "react-helmet";
 import AllBlog from "../components/AllBlog.js";
 import AllTestimonials from "../components/AllTestimonials.js";
 import CtaForm from "../components/CtaForm.js";
@@ -25,6 +26,10 @@ const banner = {
 export default function Home() {
   return (
     <div className="Home">
+      <Helmet>
+          {/* <title>Websites that Elevate your Organisation</title> */}
+          <link rel="canonical" href={window.location.href} />
+      </Helmet>
       <div className="banner" style={banner}>
         <div className="banner-overlay">
           <div className="main-content">

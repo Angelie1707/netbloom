@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
+import {Helmet} from "react-helmet";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -26,6 +27,7 @@ export default function OneBlog() {
              }
            },
          body,
+         seoTitle,
         "name": author->name,
         "authorImage": author->image
        }`,
@@ -38,13 +40,17 @@ export default function OneBlog() {
   if (!blogData) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="singleBlog">
+      <Helmet>
+          <title>{(blogData.seoTitle ? blogData.seoTitle : blogData.title)}</title>
+          <link rel="canonical" href={window.location.href} />
+      </Helmet>
       <div>
         <h2>{blogData.title}</h2>
         <div>
           <img
             src={urlFor(blogData.authorImage).width(100).url()}
-            alt="Author is Kap"
+            alt={blogData.name}
           />
           <h4>{blogData.name}</h4>
         </div>
