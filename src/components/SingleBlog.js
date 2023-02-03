@@ -10,7 +10,7 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-export default function OneBlog() {
+export default function SingleBlog() {
   const [blogData, setBlogData] = useState(null);
   const { slug } = useParams();
 
@@ -26,10 +26,21 @@ export default function OneBlog() {
               url
              }
            },
-         body,
-         seoTitle,
-        "name": author->name,
-        "authorImage": author->image
+          categories,
+          body,
+          seoTitle,
+          seoDescription,
+          ogTitle,
+          ogDescription,
+          ogImage{
+            asset->{
+              _id,
+              url
+            }
+          },
+          "name": author->name,
+          "authorImage": author->image,
+          noIndex
        }`,
         { slug }
       )
@@ -42,25 +53,37 @@ export default function OneBlog() {
   return (
     <div className="singleBlog">
       <Helmet>
-          <title>{(blogData.seoTitle ? blogData.seoTitle : blogData.title)}</title>
-          <link rel="canonical" href={window.location.href} />
+          <title> {blogData.seoTitle ? blogData.seoTitle : blogData.title} </title>
+          <meta name="robots" content={blogData.noIndex ? blogData.noIndex : 'index'} />
+          <meta name="description" content={blogData.seoDescription} />
+          <meta property='og:title' content={blogData.ogTitle ? blogData.ogTitle : blogData.title} />
+          <meta property='og:description' content={blogData.ogDescription} />
+          <meta property='og:image' content={blogData.ogImage ? urlFor(blogData.ogImage).width(300).url() : urlFor(blogData.mainImage).width(300).url()} />
       </Helmet>
       <div>
         <h2>{blogData.title}</h2>
+        <h3>{blogData.categories}</h3>
         <div>
-          <img
-            src={urlFor(blogData.authorImage).width(100).url()}
-            alt={blogData.name}
-          />
+          {blogData.authorImage && (
+            <img
+              src={urlFor(blogData.authorImage).width(100).url()}
+              alt={blogData.name}
+            />
+          )}
           <h4>{blogData.name}</h4>
         </div>
       </div>
-      <img src={urlFor(blogData.mainImage).width(200).url()} alt="" />
+      {blogData.mainImage && (
+        <img
+          src={urlFor(blogData.mainImage).url()}
+          alt={blogData.title}
+        />
+      )}
       <div>
         <BlockContent
           blocks={blogData.body}
-          projectId={sanityClient.projectId}
-          dataset={sanityClient.dataset}
+          projectId={sanityClient.mjyehiv5}
+          dataset={sanityClient.production}
         />
       </div>
     </div>

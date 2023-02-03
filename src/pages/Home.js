@@ -27,8 +27,7 @@ export default function Home() {
   return (
     <div className="Home">
       <Helmet>
-          {/* <title>Websites that Elevate your Organisation</title> */}
-          <link rel="canonical" href={window.location.href} />
+          <title>Netbloom: SEO Services in NZ | Guaranteed Results</title>
       </Helmet>
       <div className="banner" style={banner}>
         <div className="banner-overlay">
