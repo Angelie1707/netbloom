@@ -15,11 +15,13 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/validation": "^3.2.6",
     "@sanity/vision": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
-    "sanity": "^3.2.3",
+    "sanity": "^3.2.6",
+    "sanity-plugin-media": "^2.0.4",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {

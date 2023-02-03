@@ -1,7 +1,8 @@
-import {defineConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemas'
+import {defineConfig} from 'sanity';
+import {deskTool} from 'sanity/desk';
+import {visionTool} from '@sanity/vision';
+import {media} from 'sanity-plugin-media';
+import {schemaTypes} from './schemas';
 
 export default defineConfig({
   name: 'default',
@@ -11,7 +12,13 @@ export default defineConfig({
   projectId: 'mjyehiv5',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool()],
+  plugins: [
+    deskTool(),
+    media(),
+    visionTool({
+      defaultApiVersion: 'v2021-10-21',
+      defaultDataset: 'production',
+    })],
 
   schema: {
     types: schemaTypes,

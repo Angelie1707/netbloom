@@ -11,10 +11,10 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      title: 'Text',
-      name: 'text',
-      type: 'array', 
-      of: [{type: 'block'}]
+      title: 'Client Testimonial',
+      name: 'clientTestimonial',
+      type: 'text',
+      rows: 5,
     }),
     defineField({
       title: 'Client Logo',
@@ -56,4 +56,12 @@ export default defineType({
         },
     }),
   ],
+
+  preview: {
+    select: {
+      title: 'client',
+      media: 'clientLogo',
+    },
+  },
+
 });
