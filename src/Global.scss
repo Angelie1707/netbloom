@@ -7,19 +7,22 @@ $Orange: #ff6c5f;
 $NewBlue: #004AAC;
 $NewDarkBlue: #040040;
 $NewPurple: #5c81fa;
-$NewPurple: #5c81fa;
-$parText: #333;
+$DarkPurple: #440892;
+$parText: #000;
 
 // Box Shadow
 $headerShadow1: 0px 4px 10px rgba(0, 0, 0, 0.05);
-$btnShadow1: 0px 4px 10px rgba(0, 0, 0, 0.25);
+$btnShadow1: 0px 0px 20px rgba(112, 53, 236, 0.5);
 
 // Text Shadow
 $h1TextShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 $btnTextShadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+$parTextShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 // Backgrounds
 $logoGradientRight: linear-gradient(93.06deg, #5C81FA 0.55%, #6B1ECE 99.25%);
+$btnGradientBg: linear-gradient(180deg, #040040 0%, #7035EC 100%);
+$overlayGradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 97.4%);
 
 // Animations
 @keyframes spin{
@@ -38,8 +41,9 @@ $logoGradientRight: linear-gradient(93.06deg, #5C81FA 0.55%, #6B1ECE 99.25%);
 
 // Global
 *{
-    font-family: "Poppins", sans-serif!important;
+    font-family: "Jost", sans-serif!important;
     line-height: 1.4;
+    box-sizing: border-box;
 }
 
 p{
@@ -51,6 +55,10 @@ p{
 h2, h3{
     font-size: 35px;
     color: $NewDarkBlue;
+}
+
+.center{
+    text-align: center;
 }
 
 .sub-head{
@@ -93,11 +101,12 @@ h2, h3{
 }
 
 .main-content{
-    max-width: 1400px;
+    max-width: 100%;
+    width: 1400px;
     margin: 0 auto;
     display: block;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .sticky{
@@ -130,13 +139,21 @@ h2, h3{
     box-shadow: $btnShadow1;
     border-radius: 5px;
     border: none;
-    padding: 8px 20px;
+    padding: 12px 20px;
+    min-width: 150px;
     text-shadow: $btnTextShadow;
     color: $white;
     font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn:hover{
+    opacity: .8;
 }
 .gradientButton1{
-    background: $logoGradientRight;
+    background: $btnGradientBg;
 }
 .greenButton{
     background: $Green;
@@ -148,9 +165,9 @@ header{
     background: #fff;
     left: 0;
     right: 0;
-    box-shadow: $headerShadow1;
+    // box-shadow: $headerShadow1;
     z-index: 999;
-    top:-40px!important;
+    top:-32px!important;
     
     a{
         display: flex;
@@ -160,7 +177,7 @@ header{
 }
 
 .tob-bar{
-    background-color: $Green;
+    background-color: $DarkPurple;
 
     .right {
     
@@ -174,6 +191,7 @@ header{
 
                 a{
                     color: $white;
+                    font-size: 14px;
 
                     svg{
                         margin: 0 5px 0 0;
@@ -201,11 +219,7 @@ header{
         max-width: 200px;
     }
 
-    .nav-right{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
+    .nav-mid{
         .main-nav{
             padding: 0;
             display: flex;
@@ -215,6 +229,12 @@ header{
         a{
             margin: 0 15px;
         }
+    }
+
+    .nav-right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         .btn{
             margin-left: 20px;
@@ -294,7 +314,7 @@ header{
                 color: $LogoPurple;
                 font-style: italic;
                 font-weight: normal;
-                font-size: 14px;
+                font-size: 16px;
             }
         }
 
@@ -302,22 +322,20 @@ header{
     
 }
 
-
-// Home
 .banner{
+    height: calc(100vh - 100px);
 
     .banner-overlay{
-        background-color: #ffffffa1;
         padding: 100px 0;
 
         .banner-con{
-            max-width: 700px;
-            margin: 0 auto;
+            max-width: 1040px;
+            padding: 0 150px 100px 150px;
 
             h1{
                 font-weight: 800;
-                font-size: 55px;
-                text-align: center;
+                font-size: 70px;
+                text-align: left;
                 color: $NewDarkBlue;
                 text-shadow: $h1TextShadow;
             }
@@ -325,15 +343,79 @@ header{
             p{
                 font-size: 20px;
                 font-weight: 400;
+                text-shadow: $parTextShadow;
+                margin: 20px 0 40px 0;
             }
 
+            button{
+                margin-right: 40px;
+            }
         }
     }
 }
 
+.elements {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+
+    img{
+        position: absolute;
+    }
+}
+
+// Home
 .Home{
-    .banner .banner-overlay{
-        padding: 100px 0 200px 0;
+    .banner {
+        position: relative;
+        overflow: hidden;
+
+        .banner-overlay{
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .clients {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: $overlayGradient;
+        }
+        .elements {
+
+            img.el-1 {
+                bottom: 0;
+                right: 0;
+            }
+            
+            img.el-2 {
+                top: 20%;
+            }
+            
+            img.el-3 {
+                top: -10%;
+                right: 15%;
+            }
+            
+            img.el-4 {
+                bottom: 0;
+                right: 30%;
+            }
+            
+            img.el-5 {
+                top: 0;
+                right: 0;
+            }
+            
+            img.el-6 {
+                bottom: 0;
+                left: 10%;
+            }
+        }
     }
 }
 

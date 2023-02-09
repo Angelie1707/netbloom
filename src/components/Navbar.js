@@ -26,7 +26,7 @@ export default function Navbar() {
             <div className="nav-left">
               <Link to="/"><img src={Logo} alt="Netbloom Logo" className="logo"/></Link>
             </div>
-            <div className="nav-right">
+            <div className="nav-mid">
               <ul className="main-nav">
                 <li>
                   <Link to="/">Home</Link>
@@ -44,6 +44,8 @@ export default function Navbar() {
                   <Link to="/contact-us">Contact Us</Link>
                 </li>
               </ul>
+            </div>
+            <div className="nav-right">
               <button className="gradientButton1 btn">Get a Quote</button>
             </div>
           </div>

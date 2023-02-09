@@ -28,8 +28,8 @@ export default defineType({
     defineField({
       title: 'Author',
       name: 'author',
-      type: 'reference',
-      to: {type: 'author'},
+      type: 'author',
+      // to: {type: 'author'},
     }),
     defineField({
       title: 'Published at',
@@ -127,15 +127,16 @@ export default defineType({
     }),
   ],
   
-  preview: {
-      select: {
-        title: 'title',
-        author: 'author.name',
-        media: 'mainImage',
-      },
-      prepare(selection) {
-        const {author} = selection
-        return {...selection, subtitle: author && `by ${author}`}
-      },
-    },
+  
+  // preview: {
+  //     select: {
+  //       title: 'title',
+  //       author: 'author.name',
+  //       media: 'profileImage',
+  //     },
+  //     prepare(selection) {
+  //       const {author} = selection
+  //       return {...selection, subtitle: author && `by ${author}`}
+  //     },
+  //   },
 });

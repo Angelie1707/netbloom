@@ -1,27 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import {Helmet} from "react-helmet";
 import AllBlog from "../components/AllBlog.js";
 import AllTestimonials from "../components/AllTestimonials.js";
-import CtaForm from "../components/CtaForm.js";
-import bannerBg from '../assets/images/digital-marketing-services-dunedin.webp';
-import target from '../assets/images/target.webp';
-import graphic from '../assets/images/graphic-design.webp';
-import statistics from '../assets/images/statistics.webp';
-import dashboard from '../assets/images/dashboard.webp';
-import deliveryservice from '../assets/images/delivery-service.webp';
-import seo from '../assets/images/seo.webp';
-import lightbulb from '../assets/images/light-bulb.webp';
-import network from '../assets/images/network.webp';
-import network1 from '../assets/images/network-1.webp';
+// import CtaForm from "../components/CtaForm.js";
+// import bannerBg from '../assets/images/digital-marketing-services-dunedin.webp';
+import target from '../assets/icons/target.webp';
+import graphic from '../assets/icons/graphic-design.webp';
+import statistics from '../assets/icons/statistics.webp';
+import dashboard from '../assets/icons/dashboard.webp';
+import deliveryservice from '../assets/icons/delivery-service.webp';
+import seo from '../assets/icons/seo.webp';
+import lightbulb from '../assets/icons/light-bulb.webp';
+import network from '../assets/icons/network.webp';
+import network1 from '../assets/icons/network-1.webp';
+import google from '../assets/images/google reviews.webp';
+import el1 from '../assets/elements/Polygon 1.webp';
+import el2 from '../assets/elements/Polygon 2.webp';
+import el3 from '../assets/elements/Polygon 3.webp';
+import el4 from '../assets/elements/Polygon 4.webp';
+import el5 from '../assets/elements/Polygon 5.webp';
+import el6 from '../assets/elements/Polygon 6.webp';
 
 
-const banner = {
-  backgroundImage: `url(${bannerBg})`,
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-};
+// const banner = {
+//   backgroundImage: `url(${bannerBg})`,
+//   backgroundPosition: 'center',
+//   backgroundSize: 'cover',
+//   backgroundRepeat: 'no-repeat',
+// };
 
 export default function Home() {
   return (
@@ -29,18 +37,32 @@ export default function Home() {
       <Helmet>
           <title>Netbloom: SEO Services in NZ | Guaranteed Results</title>
       </Helmet>
-      <div className="banner" style={banner}>
+      <div className="banner">
         <div className="banner-overlay">
           <div className="main-content">
             <div className="banner-con">
               <h1>Websites that Elevate your Organisation</h1>
               <p>Reach Your Target Audience & Increase Your Enterprise Value With High-Impact SEO Services & Converting Web Design</p>
+              <div className="flex btns">
+                <button className="gradientButton1 btn">Get a Quote</button>
+                <Link to="https://www.google.com/search?q=netbloom&rlz=1C1ONGR_enPH1012PH1012&oq=netbloom&aqs=chrome..69i57j46i10i131i433i512j69i60l3j69i61j69i65l2.1752j0j7&sourceid=chrome&ie=UTF-8#lrd=0xa82ea9ecc91883d3:0xe045a8ae841b57ff,1,,,," target="_blank" title="Netbloom Google Reviews"><img src={google} alt="Google Reviews"/></Link>
+              </div>
             </div>
+          </div>
+          <div className="clients">
+
+          </div>
+          <div className="elements">
+            <img className="el-1" src={el1} alt="Web Design"/>
+            <img className="el-2" src={el2} alt="Web Design"/>
+            <img className="el-3" src={el3} alt="Web Design"/>
+            <img className="el-4 spin" src={el4} alt="Web Design"/>
+            <img className="el-5 spin" src={el5} alt="Web Design"/>
+            <img className="el-6" src={el6} alt="Web Design"/>
           </div>
         </div>
       </div>
-      <CtaForm/>
-      <div className="default-sec results-driven">
+      <div className="default-sec results-driven center">
         <div className="default-sec-overlay">
           <div className="default-sec-content main-content">
             <div className="default-sec-wrap">
@@ -73,7 +95,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="default-sec why-trust bg-sec">
+      <div className="default-sec why-trust bg-sec center">
         <div className="default-sec-overlay">
           <img src={network1} alt="network1" className="top-left spin net-img"/>
           <img src={network} alt="network" className="bot-right spin net-img"/>

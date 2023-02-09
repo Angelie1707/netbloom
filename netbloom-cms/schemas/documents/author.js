@@ -1,18 +1,29 @@
 import {defineField, defineType} from 'sanity';
 
+// import client from 'part:@sanity/base/client';
+
+// const resp = await client.request({ uri: 'users/me' });
+
 export default defineType({
   name: 'author',
   title: 'Author',
-  type: 'document',
+  type: 'object',
   fields: [
+    defineField({
+      name: 'id',
+      readOnly: true,
+      type: 'string',
+    }),
     defineField({
       title: 'Name',
       name: 'name',
+      readOnly: true,
       type: 'string',
     }),
     defineField({
       title: 'Slug',
       name: 'slug',
+      readOnly: true,
       type: 'slug',
       options: {
         source: 'name',
@@ -21,30 +32,25 @@ export default defineType({
     }),
     defineField({
       title: 'Image',
-      name: 'image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'profileImage',
+      readOnly: true,
+      type: 'string',
+      // type: 'image',
+      // options: {
+      //   hotspot: true,
+      // },
     }),
     defineField({
-      title: 'Bio',
-      name: 'bio',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
-        },
-      ],
+      name: 'role',
+      readOnly: true,
+      type: 'string',
+    }),
+    defineField({
+      name: 'provider',
+      readOnly: true,
+      type: 'string',
     }),
   ],
-  preview: {
-    select: {
-      title: 'name',
-      media: 'image',
-    },
-  },
+  // initialValue: () => client.request({ uri: 'users/me' }),
+  
 });

@@ -25,6 +25,14 @@ export default defineType({
       },
     }),
     defineField({
+      title: 'Slider Logo',
+      name: 'sliderLogo',
+      type: 'image',
+      options: {
+          hotspot: true,
+      },
+    }),
+    defineField({
       title: 'Full Name',
       name: 'fullName',
       type: 'string'
@@ -61,6 +69,10 @@ export default defineType({
     select: {
       title: 'client',
       media: 'clientLogo',
+    },
+    select: {
+      title: 'client',
+      media: 'sliderLogo',
     },
   },
 
