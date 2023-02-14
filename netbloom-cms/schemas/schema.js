@@ -6,6 +6,7 @@ import blog from './documents/blog';
 import portfolio from './documents/portfolio';
 import faqs from './documents/faqs';
 import testimonial from './documents/testimonial';
+import clients from './documents/clients';
 import author from './documents/author';
 
 const resp = await client.request({ uri: 'users/me' });
@@ -17,6 +18,7 @@ export default createSchema({
     casestudy,
     portfolio,
     testimonial,
+    clients,
     faqs,
     author,
   ])

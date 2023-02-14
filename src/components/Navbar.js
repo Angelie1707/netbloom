@@ -32,7 +32,13 @@ export default function Navbar() {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/web-design-nz">Websites</Link>
+                  <Link to="/seo-services-nz">SEO</Link>
+                </li>
+                <li>
+                  <Link to="/web-design-nz">Web Design</Link>
+                </li>
+                <li>
+                  <Link to="/e-commerce-website-nz">E-commerce Website</Link>
                 </li>
                 <li>
                   <Link to="/about-us">About</Link>

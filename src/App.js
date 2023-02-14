@@ -2,9 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {Helmet} from "react-helmet";
 import Home from "./pages/Home.js";
+import Blog from "./pages/Blog.js";
+import SingleBlog from "./pages/SingleBlog.js";
 import Navbar from "./components/Navbar.js";
 import AllBlog from "./components/AllBlog.js";
-import SingleBlog from "./components/SingleBlog.js";
 import AllTestimonials from "./components/AllTestimonials.js";
 import './App.css';
 import './Global.scss';
@@ -21,7 +22,8 @@ const App = () => {
         <Navbar/>
         <Routes>
           <Route element={<Home/>} path="/" exact />
-          <Route element={<AllBlog/>} path="/blog" />
+          <Route element={<Blog/>} path="/blog" />
+          <Route element={<AllBlog/>} />
           <Route element={<AllTestimonials/>} path="/testimonials" />
           <Route element={<SingleBlog/>} path="/:slug" />
         </Routes>

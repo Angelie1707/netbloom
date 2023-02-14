@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import {Helmet} from "react-helmet";
-import AllBlog from "../components/AllBlog.js";
 import AllTestimonials from "../components/AllTestimonials.js";
 // import CtaForm from "../components/CtaForm.js";
 // import bannerBg from '../assets/images/digital-marketing-services-dunedin.webp';
@@ -33,9 +32,14 @@ import el6 from '../assets/elements/Polygon 6.webp';
 
 export default function Home() {
   return (
-    <div className="Home">
+    <div className="home page">
       <Helmet>
-          <title>Netbloom: SEO Services in NZ | Guaranteed Results</title>
+        <title>Netbloom: SEO Services in NZ | Guaranteed Results</title>
+        <meta name="robots" content="index" />
+        <meta name="description" content="Leading SEO services in NZ. Transparent, no contracts & 100% performance based. Generate more leads & sales with Netbloom." />
+        <meta property='og:title' content="Netbloom: SEO Services in NZ | Guaranteed Results" />
+        <meta property='og:description' content="Leading SEO services in NZ. Transparent, no contracts & 100% performance based. Generate more leads & sales with Netbloom."/>
+        <meta property='og:image' content="" />
       </Helmet>
       <div className="banner">
         <div className="banner-overlay">
@@ -138,7 +142,6 @@ export default function Home() {
         </div>
       </div>
       <AllTestimonials/>
-      <AllBlog/>
     </div>
   );
 }

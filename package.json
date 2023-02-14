@@ -24,7 +24,7 @@
     "read-more-react": "^1.0.10",
     "sanity": "^3.2.3",
     "sass": "^1.57.1",
-    "swiper": "^8.4.6",
+    "swiper": "^8.4.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
