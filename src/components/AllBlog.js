@@ -27,7 +27,7 @@ export default function AllBlog() {
     <div className="component">
       {allBlogData &&
         allBlogData.map((blog, index) => (
-          <Link to={"/" + blog.slug.current} key={blog.slug.current}>
+          <Link to={"/blog/" + blog.slug.current} key={blog.slug.current} title={blog.title}>
             <span key={index}>
               <img src={blog.mainImage.asset.url} alt="" />
               <span>

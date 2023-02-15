@@ -51,7 +51,9 @@ export default function SingleBlog() {
       .catch(console.error);
   }, [slug]);
 
-  if (!blogData) return <center Style="padding: 100px;font-weight:bold;font-size: 30px;">Coming Soon..</center>;
+  if (!blogData) return <center Style="padding: 100px;font-weight:bold;font-size: 30px;">Loading...</center>;
+
+  let imageUrl = urlFor(blogData.mainImage).url();
 
   return (
     <div className="singleBlog page">
@@ -63,7 +65,7 @@ export default function SingleBlog() {
           <meta property='og:description' content={blogData.ogDescription} />
           <meta property='og:image' content={blogData.ogImage ? urlFor(blogData.ogImage).width(300).url() : urlFor(blogData.mainImage).width(300).url()} />
       </Helmet>
-      <div className="banner">
+      <div className="banner" style={{backgroundImage: `url(${imageUrl})`}}>
         <div className="banner-overlay">
           <div className="main-content">
             <div className="banner-con">
@@ -85,7 +87,6 @@ export default function SingleBlog() {
         <div className="default-sec-overlay">
           <div className="default-sec-content">
             <div className="default-sec-wrap">
-              {/* <h3>{blogData.categories}</h3> */}
               <div>
                 {blogData.authorImage && (
                   <img
@@ -96,12 +97,23 @@ export default function SingleBlog() {
                 <h4>{blogData.name}</h4>
               </div>
             </div>
-            {blogData.mainImage && (
+            {blogData.categories && (
+                <ul className="categories" style={{ listStyle: "none" }}>
+                  {blogData.categories.map((category) => (
+                    <li key={category}>
+                      <Link to={"/blog/" + category} key={category} title={category}>
+                        <h3>{category}</h3>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            {/* {blogData.mainImage && (
               <img
                 src={urlFor(blogData.mainImage).url()}
                 alt={blogData.title}
               />
-            )}
+            )} */}
             <div>
               <BlockContent
                 blocks={blogData.body}

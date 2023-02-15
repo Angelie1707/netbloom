@@ -232,6 +232,10 @@ header{
 
 .page:not(.home) .banner{
     background-color: $lightGray;
+
+    .banner-overlay{
+        background: rgba(255,255,255,.5);
+    }
 }
 
 .banner{
@@ -239,6 +243,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-position: center;
 
     .banner-overlay{
         width: 100%;
@@ -543,4 +549,28 @@ header{
         right: -5%;
     }
 
+}
+
+// Single post
+ul.categories {
+    display: flex;
+
+    li {
+        margin-right: 10px;
+
+        a {
+            text-decoration: none;
+            background: $NewPurple;
+            display: block;
+            padding: 3px 10px;
+            border-radius: 5px;
+
+            h3 {
+                font-size: 20px;
+                color: #fff;
+                font-weight: normal;
+                letter-spacing: 2px;
+            }
+        }
+    }
 }
