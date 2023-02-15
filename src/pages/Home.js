@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import {Helmet} from "react-helmet";
 import AllTestimonials from "../components/AllTestimonials.js";
+import Clients from "../components/Clients.js";
 // import CtaForm from "../components/CtaForm.js";
 // import bannerBg from '../assets/images/digital-marketing-services-dunedin.webp';
 import target from '../assets/icons/target.webp';
@@ -54,7 +55,7 @@ export default function Home() {
             </div>
           </div>
           <div className="clients">
-
+            <Clients/>
           </div>
           <div className="elements">
             <img className="el-1" src={el1} alt="Web Design"/>

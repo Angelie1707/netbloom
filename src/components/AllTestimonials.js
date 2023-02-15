@@ -55,7 +55,7 @@ export default function AllTestimonials() {
               }}
               navigation={true}
               modules={[Autoplay, Pagination, Navigation]}
-              className="carousel"
+              className="testimonial-carousel"
             >
               {allTestimonialsData &&
                 allTestimonialsData.map((testimonial, index) => (

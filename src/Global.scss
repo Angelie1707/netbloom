@@ -297,6 +297,10 @@ header{
     max-width: 100%;
 }
 
+.no-padd{
+    padding: 0;
+}
+
 .elements {
     position: absolute;
     z-index: -1;
@@ -356,10 +360,7 @@ header{
 .swiper-button-prev, .swiper-button-next, .swiper-pagination {
     display: none;
 }
-// .swiper-wrapper {
-//     transition-timing-function: linear;
-// }
-.carousel{
+.testimonial-carousel{
     cursor: grab;
     overflow: visible;
     margin: 0 -40%;
@@ -396,6 +397,30 @@ header{
     }
     
 }
+
+//Client logos
+.clients-carousel{
+    cursor: grab;
+    overflow: visible;
+
+    .swiper-wrapper {
+        transition-timing-function: linear;
+
+        img {
+            height: 100px;
+            width: 100%;
+            object-fit: contain;
+            filter: brightness(0) contrast(.8);
+            transition: .3s;
+        }
+        
+        img:hover {
+            filter: none;
+        }
+        
+    }
+}
+
 
 // Home
 .home{
@@ -441,7 +466,7 @@ header{
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 100px;
+            height: 105px;
             background: $overlayGradient;
         }
         .elements {
