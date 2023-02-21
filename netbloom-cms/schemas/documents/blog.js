@@ -30,6 +30,7 @@ export default defineType({
       name: 'author',
       type: 'author',
       // to: {type: 'author'},
+      of: [{type: 'reference', to: {type: 'author'}}],
     }),
     defineField({
       title: 'Published at',
@@ -37,21 +38,27 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
-      title: 'Categories', 
+      title: 'Categories',
       name: 'categories',
       type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: [ 
-          {value: 'seo', title: 'SEO'},
-          {value: 'sem', title: 'SEM'},
-          {value: 'guides', title: 'Guides'},
-          {value: 'branding', title: 'Branding'},
-          {value: 'webdesign', title: 'Web Design'}
-          ],
-          layout: 'radio'
-        },
+      of: [{type: 'reference', to: {type: 'category'}}],
     }),
+    // defineField({
+    //   title: 'Categories', 
+    //   name: 'categories',
+    //   type: 'array',
+    //   of: [{type: 'string'}],
+    //   options: {
+    //     list: [ 
+    //       {value: 'seo', title: 'SEO'},
+    //       {value: 'sem', title: 'SEM'},
+    //       {value: 'guides', title: 'Guides'},
+    //       {value: 'branding', title: 'Branding'},
+    //       {value: 'webdesign', title: 'Web Design'}
+    //       ],
+    //       layout: 'radio'
+    //     },
+    // }),
     defineField({
       name: 'mainImage',
       title: 'Main image',
