@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import {Helmet} from "react-helmet";
+import Logo from '../assets/Logo-1.webp';
 import AllTestimonials from "../components/AllTestimonials.js";
 import AllCaseStudies from "../components/AllCaseStudies.js";
 import Clients from "../components/Clients.js";
@@ -208,7 +209,30 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <AllCaseStudies/>
+      <div className="default-sec case-studies">
+      <div className="default-sec-overlay">
+        <div className="default-sec-content">
+          <div className="default-sec-wrap">
+            <Grid container rowSpacing={2} columns={{ xs: 6, sm: 6, md: 12 }} columnSpacing={{ xs: 6, sm: 6, md: 6 }} className="content-top flex-center">
+              <Grid item xs={3}>
+                <div className="grid-item left-con">
+                  <Link to="/"><img src={Logo} alt="Netbloom Logo" className="logo"/></Link>
+                  <h2>Case Studies</h2>
+                  <p class="sub-head LogoPurpleTxt">Proven results.</p>
+                  <p>We're proud to deliver results to a range of different industries.</p>
+                  <Link to="/case-studies" className="gradientButton1 btn">Case Studies</Link>
+                </div>
+              </Grid>
+              <Grid item xs={9}>
+                <div className="grid-item right-con">
+                  <AllCaseStudies/>
+                </div>
+              </Grid>
+            </Grid>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   );
 }

@@ -8,12 +8,12 @@ $NewBlue: #004AAC;
 $NewDarkBlue: #040040;
 $NewPurple: #5c81fa;
 $DarkPurple: #440892;
-$lightGray: #E0E0E0;
+$lightGray: #F8F8F8;
 $parText: #000;
 
 // Box Shadow
 $headerShadow1: 0px 4px 10px rgba(0, 0, 0, 0.05);
-$btnShadow1: 0px 0px 20px rgba(112, 53, 236, 0.5);
+$btnShadow1: 0px 0px 20px rgba(112, 53, 236, 0.25);
 
 // Text Shadow
 $h1TextShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -157,7 +157,7 @@ img{
     letter-spacing: 1px;
     cursor: pointer;
     transition: .3s;
-    // display: inline-block;
+    display: inline-block;
 }
 .btn:hover{
     opacity: .8;
@@ -516,34 +516,33 @@ header{
     }
 
     a.cs-block {
-        height: 500px;
         position: relative;
         border-radius: 20px;
         overflow: hidden;
+        background: $NewBlue;
+        width: 100%;
     
         img {
-            height: 100%;
+            height: 300px;
             width: 100%;
             object-fit: cover;
+            transition: .5s;
+            opacity: .5;
         }
 
         .content {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            padding: 30px;
+            padding: 20px 30px 30px 30px;
             width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            background: rgba(0, 0, 0, 0.8);
+            background: $NewBlue;
 
             h3 {
-                padding-bottom: 30px;
+                padding-bottom: 10px;
                 font-size: 25px;
             }
         }
+    }
+    a.cs-block:hover img{
+        opacity: 1;
     }
 }
 
@@ -615,8 +614,9 @@ header{
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 105px;
             background: $overlayGradient;
+            padding: 60px 0 20px 0;
+            z-index: 1;
         }
         .elements {
 

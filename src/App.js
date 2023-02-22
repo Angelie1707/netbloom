@@ -7,7 +7,8 @@ import SingleBlog from "./pages/SingleBlog.js";
 import Navbar from "./components/Navbar.js";
 import AllBlog from "./components/AllBlog.js";
 import AllTestimonials from "./components/AllTestimonials.js";
-import CaseStudies from "./components/AllCaseStudies.js";
+import CaseStudies from "./pages/CaseStudies.js";
+import AllCaseStudies from "./components/AllCaseStudies.js";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
@@ -30,9 +31,11 @@ const App = () => {
           <Route element={<Home/>} path="/" exact />
           <Route element={<Blog/>} path="/blog" />
           <Route element={<AllBlog/>} />
+          <Route element={<SingleBlog/>} path="/blog/:slug" />
           <Route element={<AllTestimonials/>} path="/testimonials" />
           <Route element={<CaseStudies/>} path="/case-studies" />
-          <Route element={<SingleBlog/>} path="/blog/:slug" />
+          <Route element={<AllCaseStudies/>} />
+          {/* <Route element={<SingleCaseStudy/>} path="/case-studies/:slug" /> */}
         </Routes>
       </Router>
     </div>

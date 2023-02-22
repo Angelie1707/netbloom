@@ -35,6 +35,7 @@ export default defineType({
       title: 'Published at',
       name: 'publishedAt',
       type: 'datetime',
+      readOnly: true,
     }),
     defineField({
       title: 'Categories',
