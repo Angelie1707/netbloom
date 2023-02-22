@@ -16,19 +16,19 @@ export default function AllTestimonials() {
     sanityClient
       .fetch(
         `*[_type == "testimonial"]{
-        client,
-        clientTestimonial,
-        fullName,
-        position,
-        website,
-        rating,
-        clientLogo{
-          asset->{
-          _id,
-          url
-        }
-      }
-    }`
+            client,
+            clientTestimonial,
+            fullName,
+            position,
+            website,
+            rating,
+            clientLogo{
+              asset->{
+              _id,
+              url
+            }
+          }
+        }`
       )
       .then((data) => setAllTestimonials(data))
       .catch(console.error);
@@ -68,7 +68,7 @@ export default function AllTestimonials() {
                         readMoreText={'read more...'}
                       />
                     </p>
-                    <div className="flex">
+                    <div className="flex-left">
                       <span>
                         <img src={testimonial.clientLogo.asset.url} alt={testimonial.client} />
                       </span>

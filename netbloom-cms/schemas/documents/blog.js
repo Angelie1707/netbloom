@@ -28,9 +28,8 @@ export default defineType({
     defineField({
       title: 'Author',
       name: 'author',
-      type: 'author',
-      // to: {type: 'author'},
-      of: [{type: 'reference', to: {type: 'author'}}],
+      type: 'reference',
+      to: {type: 'author'},
     }),
     defineField({
       title: 'Published at',
@@ -41,24 +40,8 @@ export default defineType({
       title: 'Categories',
       name: 'categories',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      of: [{type: 'reference',to: {type: 'category'}}],
     }),
-    // defineField({
-    //   title: 'Categories', 
-    //   name: 'categories',
-    //   type: 'array',
-    //   of: [{type: 'string'}],
-    //   options: {
-    //     list: [ 
-    //       {value: 'seo', title: 'SEO'},
-    //       {value: 'sem', title: 'SEM'},
-    //       {value: 'guides', title: 'Guides'},
-    //       {value: 'branding', title: 'Branding'},
-    //       {value: 'webdesign', title: 'Web Design'}
-    //       ],
-    //       layout: 'radio'
-    //     },
-    // }),
     defineField({
       name: 'mainImage',
       title: 'Main image',
@@ -77,28 +60,30 @@ export default defineType({
       name: 'seoTitle',
       title: 'SEO Title',
       group: 'seo',
-      maxLength: 20,
-      // validation: Rule => [
-      //   Rule.required().min(40).max(50).error('SEO titles between 40 and 50 characters with commonly searched words have the best click-through-rates'),
-      // ],
+      options: {
+        source: 'title',
+      },
       type: 'string',
+      validation: Rule => [
+        Rule.required().min(40).max(50).error('SEO titles between 40 and 50 characters with commonly searched words have the best click-through-rates'),
+      ],
     },
     {
       name: 'seoDescription',
       title: 'SEO Description',
       group: 'seo',
-      // validation: Rule => [
-      //   Rule.required().min(50).max(156).error('Good SEO descriptions utilize keywords, summarize the story and are between 140-156 characters long.'),
-      // ],
+      validation: Rule => [
+        Rule.required().min(50).max(156).error('Good SEO descriptions utilize keywords, summarize the story and are between 140-156 characters long.'),
+      ],
       type: 'text',
     },
     {
       name: "ogTitle",
       title: "Open Graph Title",
       group: 'seo',
-      // validation: Rule => [
-      //   Rule.required().min(40).max(50).error('SEO titles between 40 and 50 characters with commonly searched words have the best click-through-rates'),
-      // ],
+      validation: Rule => [
+        Rule.required().min(40).max(50).error('SEO titles between 40 and 50 characters with commonly searched words have the best click-through-rates'),
+      ],
       type: "string",
     },
     {
@@ -135,15 +120,18 @@ export default defineType({
   ],
   
   
-  // preview: {
-  //     select: {
-  //       title: 'title',
-  //       author: 'author.name',
-  //       media: 'profileImage',
-  //     },
-  //     prepare(selection) {
-  //       const {author} = selection
-  //       return {...selection, subtitle: author && `by ${author}`}
-  //     },
-  //   },
+  preview: {
+    select: {
+      title: 'title',
+      author: 'author.name',
+      media: 'mainImage',
+    },
+    prepare(selection) {
+      const {author} = selection
+      return Object.assign({}, selection, {
+        subtitle: author && `by ${author}`,
+      })
+    },
+  },
+
 });

@@ -29,7 +29,7 @@ export default function SingleBlog() {
               url
              }
            },
-          categories,
+          "categories": categories[]->title,
           body,
           seoTitle,
           seoDescription,
@@ -97,15 +97,15 @@ export default function SingleBlog() {
                 <h4>{blogData.name}</h4>
               </div>
             </div>
-            {blogData.categories && (
+            {blogData.categories &&(
                 <ul className="categories" style={{ listStyle: "none" }}>
-                  {blogData.categories.map((category) => (
-                    <li key={category}>
-                      <Link to={"/blog/" + category} key={category} title={category}>
-                        <h3>{category}</h3>
-                      </Link>
-                    </li>
-                  ))}
+                    {blogData.categories.map((category, categoriesSlug, i) => (
+                        <li>
+                          <a href={"/blog/" + categoriesSlug} title={category}>
+                            <h3>{category}</h3>
+                          </a>
+                        </li>
+                    ))}
                 </ul>
               )}
             {/* {blogData.mainImage && (

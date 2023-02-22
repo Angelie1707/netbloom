@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import {Helmet} from "react-helmet";
 import AllTestimonials from "../components/AllTestimonials.js";
+import AllCaseStudies from "../components/AllCaseStudies.js";
 import Clients from "../components/Clients.js";
 // import CtaForm from "../components/CtaForm.js";
 // import bannerBg from '../assets/images/digital-marketing-services-dunedin.webp';
@@ -22,6 +23,15 @@ import el3 from '../assets/elements/Polygon 3.webp';
 import el4 from '../assets/elements/Polygon 4.webp';
 import el5 from '../assets/elements/Polygon 5.webp';
 import el6 from '../assets/elements/Polygon 6.webp';
+import el7 from '../assets/elements/Polygon 3 (1).webp';
+import el8 from '../assets/elements/Polygon 4 (1).webp';
+import el9 from '../assets/elements/Polygon 4 (2).webp';
+import el10 from '../assets/elements/Polygon 3 (2).webp';
+import el11 from '../assets/elements/Polygon 7.webp';
+import deadline from '../assets/icons/deadline.webp';
+import computer from '../assets/icons/computer.webp';
+import smartphone from '../assets/icons/smartphone.webp';
+import magnifying from '../assets/icons/magnifying-glass.webp';
 
 
 // const banner = {
@@ -48,8 +58,8 @@ export default function Home() {
             <div className="banner-con">
               <h1>Websites that Elevate your Organisation</h1>
               <p>Reach Your Target Audience & Increase Your Enterprise Value With High-Impact SEO Services & Converting Web Design</p>
-              <div className="flex btns">
-                <button className="gradientButton1 btn">Get a Quote</button>
+              <div className="flex-left btns">
+                <Link to="#" className="gradientButton1 btn">Get a Quote</Link>
                 <Link to="https://www.google.com/search?q=netbloom&rlz=1C1ONGR_enPH1012PH1012&oq=netbloom&aqs=chrome..69i57j46i10i131i433i512j69i60l3j69i61j69i65l2.1752j0j7&sourceid=chrome&ie=UTF-8#lrd=0xa82ea9ecc91883d3:0xe045a8ae841b57ff,1,,,," target="_blank" title="Netbloom Google Reviews"><img src={google} alt="Google Reviews"/></Link>
               </div>
             </div>
@@ -67,29 +77,29 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="default-sec results-driven center">
+      <div className="default-sec results-driven center darkblueBg">
         <div className="default-sec-overlay">
           <div className="default-sec-content main-content">
             <div className="default-sec-wrap">
-              <h2>Results-driven Marketing</h2>
+              <h2 data-aos="fade">Results-driven Marketing</h2>
               <p className="sub-head">Quality Leads. Better Conversions.</p>
-              <Grid container rowSpacing={6} columns={{ xs: 4, sm: 4, md: 12 }} columnSpacing={{ xs: 4, sm: 8, md: 12 }}>
-                <Grid item xs={4}>
-                  <div className="grid-item">
+              <Grid container rowSpacing={6} columns={{ xs: 4, sm: 4, md: 12 }} columnSpacing={{ xs: 4, sm: 4, md: 4 }} className="flex-center">
+                <Grid item xs={3} data-aos="fade">
+                  <div className="grid-item whiteBg">
                     <img src={graphic} alt="Web Design"/>
                     <h3>Web Design</h3>
                     <p>Create a brand and communicate your value.</p>
                   </div>
                 </Grid>
-                <Grid item xs={4}>
-                  <div className="grid-item">
+                <Grid item xs={3} data-aos="fade">
+                  <div className="grid-item whiteBg">
                     <img src={statistics} alt="SEO"/>
                     <h3>SEO</h3>
                     <p>Find new clients organically and grow a foundation for tomorrow.</p>
                   </div>
                 </Grid>
-                <Grid item xs={4}>
-                  <div className="grid-item">
+                <Grid item xs={3} data-aos="fade">
+                  <div className="grid-item whiteBg">
                     <img src={target} alt="PPC"/>
                     <h3>PPC</h3>
                     <p>Put your business in front of the right people today.</p>
@@ -97,6 +107,10 @@ export default function Home() {
                 </Grid>
               </Grid>
             </div>
+          </div>
+          <div className="elements">
+            <img className="el-7 spin" src={el7} alt="Polygon"/>
+            <img className="el-8 spin" src={el8} alt="Polygon"/>
           </div>
         </div>
       </div>
@@ -106,7 +120,7 @@ export default function Home() {
           <img src={network} alt="network" className="bot-right spin net-img"/>
           <div className="default-sec-content main-content">
             <div className="default-sec-wrap">
-              <h2>Why Trust Netbloom For Your Digital Operations?</h2>
+              <h2 data-aos="fade">Why Trust Netbloom For Your Digital Operations?</h2>
               <p className="sub-head">Quality Leads. Better Conversions.</p>
               <Grid container rowSpacing={4} columns={{ xs: 3, sm: 6, md: 12 }} columnSpacing={{ xs: 3, sm: 3, md: 3 }}>
                 <Grid item xs={3}>
@@ -143,6 +157,58 @@ export default function Home() {
         </div>
       </div>
       <AllTestimonials/>
+      <div className="default-sec ready left lightGrayBg">
+        <div className="default-sec-overlay">
+          <div className="default-sec-content main-content max1200">
+            <div className="default-sec-wrap">
+              <Grid container rowSpacing={2} columns={{ xs: 6, sm: 6, md: 12 }} columnSpacing={{ xs: 6, sm: 6, md: 6 }} className="content-top flex-center">
+                <Grid item xs={6}>
+                  <div className="grid-item left-con">
+                    <h2>Are You Ready To Establish Your Presence In The Digital World?</h2>
+                  </div>
+                </Grid>
+                <Grid item xs={6}>
+                  <div className="grid-item right-con">
+                    <p>Now you don’t have to settle for inefficient SEO plans that fail to deliver the flow of leads you wish or short-term solutions that don’t align with your business goals. At Netbloom, we use industry tools tailored to your brand identity to help you grow your business and build a robust online presence.</p>
+                  </div>
+                </Grid>
+              </Grid>
+              <Grid container rowSpacing={2}  className="content-bot flex-center">
+                <Grid item xs={3} className="center flex-center">
+                  <div className="grid-item">
+                    <img src={deadline} alt="Fast"/>
+                    <h4 className="darkblueBgTxt">Fast</h4>
+                  </div>
+                </Grid>
+                <Grid item xs={3} className="center flex-center">
+                  <div className="grid-item">
+                    <img src={computer} alt="Modern"/>
+                    <h4 className="darkblueBgTxt">Modern</h4>
+                  </div>
+                </Grid>
+                <Grid item xs={3} className="center flex-center">
+                  <div className="grid-item">
+                    <img src={smartphone} alt="Mobile-Friendly"/>
+                    <h4 className="darkblueBgTxt">Mobile-Friendly</h4>
+                  </div>
+                </Grid>
+                <Grid item xs={3} className="center flex-center">
+                  <div className="grid-item">
+                    <img src={magnifying} alt="Optimised for Search"/>
+                    <h4 className="darkblueBgTxt">Optimised for Search</h4>
+                  </div>
+                </Grid>
+              </Grid>
+            </div>
+          </div>
+          <div className="elements">
+            <img className="el-9 spin" src={el9} alt="Polygon"/>
+            <img className="el-10" src={el10} alt="Polygon"/>
+            <img className="el-11" src={el11} alt="Polygon"/>
+          </div>
+        </div>
+      </div>
+      <AllCaseStudies/>
     </div>
   );
 }
