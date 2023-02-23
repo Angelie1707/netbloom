@@ -176,25 +176,25 @@ export default function Home() {
                 </Grid>
               </Grid>
               <Grid container rowSpacing={2}  className="content-bot flex-center">
-                <Grid item xs={6} sm={6} md={3} className="center flex-center">
+                <Grid item xs={12} sm={6} md={3} className="center flex-center">
                   <div className="grid-item">
                     <img src={deadline} alt="Fast"/>
                     <h4 className="darkblueBgTxt">Fast</h4>
                   </div>
                 </Grid>
-                <Grid item xs={6} sm={6} md={3} className="center flex-center">
+                <Grid item xs={12} sm={6} md={3} className="center flex-center">
                   <div className="grid-item">
                     <img src={computer} alt="Modern"/>
                     <h4 className="darkblueBgTxt">Modern</h4>
                   </div>
                 </Grid>
-                <Grid item xs={6} sm={6} md={3} className="center flex-center">
+                <Grid item xs={12} sm={6} md={3} className="center flex-center">
                   <div className="grid-item">
                     <img src={smartphone} alt="Mobile-Friendly"/>
                     <h4 className="darkblueBgTxt">Mobile-Friendly</h4>
                   </div>
                 </Grid>
-                <Grid item xs={6} sm={6} md={3} className="center flex-center">
+                <Grid item xs={12} sm={6} md={3} className="center flex-center">
                   <div className="grid-item">
                     <img src={magnifying} alt="Optimised for Search"/>
                     <h4 className="darkblueBgTxt">Optimised for Search</h4>

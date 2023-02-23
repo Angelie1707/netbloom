@@ -1,14 +1,15 @@
 import React,{useEffect} from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {Helmet} from "react-helmet";
+import Navbar from "./components/Navbar.js";
 import Home from "./pages/Home.js";
 import Blog from "./pages/Blog.js";
 import SingleBlog from "./pages/SingleBlog.js";
-import Navbar from "./components/Navbar.js";
 import AllBlog from "./components/AllBlog.js";
 import AllTestimonials from "./components/AllTestimonials.js";
 import CaseStudies from "./pages/CaseStudies.js";
 import AllCaseStudies from "./components/AllCaseStudies.js";
+import SingleCaseStudy from "./pages/SingleCaseStudy.js";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
@@ -35,7 +36,7 @@ const App = () => {
           <Route element={<AllTestimonials/>} path="/testimonials" />
           <Route element={<CaseStudies/>} path="/case-studies" />
           <Route element={<AllCaseStudies/>} />
-          {/* <Route element={<SingleCaseStudy/>} path="/case-studies/:slug" /> */}
+          <Route element={<SingleCaseStudy/>} path="/case-study/:slug" />
         </Routes>
       </Router>
     </div>
