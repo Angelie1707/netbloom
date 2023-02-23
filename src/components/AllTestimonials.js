@@ -40,7 +40,7 @@ export default function AllTestimonials() {
         <div className="default-sec-content">
           <div className="default-sec-wrap">
             <Swiper
-              spaceBetween={40}
+              spaceBetween={20}
               centeredSlides={true}
               centeredSlidesBounds={true}
               slidesPerView={3}
@@ -56,6 +56,11 @@ export default function AllTestimonials() {
               navigation={true}
               modules={[Autoplay, Pagination, Navigation]}
               className="testimonial-carousel"
+              breakpoints={{
+                768: {
+                  spaceBetween: 40,
+                },
+              }}
             >
               {allTestimonialsData &&
                 allTestimonialsData.map((testimonial, index) => (

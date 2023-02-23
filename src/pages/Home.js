@@ -81,25 +81,25 @@ export default function Home() {
       <div className="default-sec results-driven center darkblueBg">
         <div className="default-sec-overlay">
           <div className="default-sec-content main-content">
-            <div className="default-sec-wrap">
+            <div className="default-sec-wrap max1200">
               <h2 data-aos="fade">Results-driven Marketing</h2>
               <p className="sub-head">Quality Leads. Better Conversions.</p>
               <Grid container rowSpacing={6} columns={{ xs: 4, sm: 4, md: 12 }} columnSpacing={{ xs: 4, sm: 4, md: 4 }} className="flex-center">
-                <Grid item xs={3} data-aos="fade">
+                <Grid item xs={4} sm={4} md={4} data-aos="fade">
                   <div className="grid-item whiteBg">
                     <img src={graphic} alt="Web Design"/>
                     <h3>Web Design</h3>
                     <p>Create a brand and communicate your value.</p>
                   </div>
                 </Grid>
-                <Grid item xs={3} data-aos="fade">
+                <Grid item xs={4} sm={4} md={4} data-aos="fade">
                   <div className="grid-item whiteBg">
                     <img src={statistics} alt="SEO"/>
                     <h3>SEO</h3>
                     <p>Find new clients organically and grow a foundation for tomorrow.</p>
                   </div>
                 </Grid>
-                <Grid item xs={3} data-aos="fade">
+                <Grid item xs={4} sm={4} md={4} data-aos="fade">
                   <div className="grid-item whiteBg">
                     <img src={target} alt="PPC"/>
                     <h3>PPC</h3>
@@ -123,29 +123,29 @@ export default function Home() {
             <div className="default-sec-wrap">
               <h2 data-aos="fade">Why Trust Netbloom For Your Digital Operations?</h2>
               <p className="sub-head">Quality Leads. Better Conversions.</p>
-              <Grid container rowSpacing={4} columns={{ xs: 3, sm: 6, md: 12 }} columnSpacing={{ xs: 3, sm: 3, md: 3 }}>
-                <Grid item xs={3}>
+              <Grid container rowSpacing={4} columnSpacing={{ xs: 3, sm: 3, md: 3 }}>
+                <Grid item xs={12} sm={6} md={3}>
                   <div className="grid-item">
                     <img src={lightbulb} alt="Work With Technical SEO Masters"/>
                     <h4>Work With Technical SEO Masters</h4>
                     <p>Thanks to their experience as Web Developers, our Netbloom professionals can take your technical SEO game to the next level, working with a wide range of online platforms, instead of being limited to the basics, like other marketing agencies.</p>
                   </div>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={6} md={3}>
                   <div className="grid-item">
                     <img src={dashboard} alt="Access Personalised Dashboard Reports"/>
                     <h4>Access Personalised Dashboard Reports</h4>
                     <p>The more you know about your business, the better you can operate to maximise its value. Connected to multiple data sources, our dashboard reports will offer you all the analytics you need, including keyword position tracking, phone calls from Google Maps, Google analytics, and many more.</p>
                   </div>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={6} md={3}>
                   <div className="grid-item">
                     <img src={deliveryservice} alt="Enjoy A Service Package Tailored To You"/>
                     <h4>Enjoy A Service Package Tailored To You</h4>
                     <p>Every customer is unique, and so is their business. At Netbloom, we customise our services to your requirements, dreams, and goals, offering fully personalised packages designed to respond to your specific needs.</p>
                     </div>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={6} md={3}>
                   <div className="grid-item">
                     <img src={seo} alt="Find The Solution That Fits Your Budget"/>
                     <h4>Find The Solution That Fits Your Budget</h4>
@@ -157,6 +157,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="testimonial-divider"></div>
       <AllTestimonials/>
       <div className="default-sec ready left lightGrayBg">
         <div className="default-sec-overlay">
@@ -175,25 +176,25 @@ export default function Home() {
                 </Grid>
               </Grid>
               <Grid container rowSpacing={2}  className="content-bot flex-center">
-                <Grid item xs={3} className="center flex-center">
+                <Grid item xs={6} sm={6} md={3} className="center flex-center">
                   <div className="grid-item">
                     <img src={deadline} alt="Fast"/>
                     <h4 className="darkblueBgTxt">Fast</h4>
                   </div>
                 </Grid>
-                <Grid item xs={3} className="center flex-center">
+                <Grid item xs={6} sm={6} md={3} className="center flex-center">
                   <div className="grid-item">
                     <img src={computer} alt="Modern"/>
                     <h4 className="darkblueBgTxt">Modern</h4>
                   </div>
                 </Grid>
-                <Grid item xs={3} className="center flex-center">
+                <Grid item xs={6} sm={6} md={3} className="center flex-center">
                   <div className="grid-item">
                     <img src={smartphone} alt="Mobile-Friendly"/>
                     <h4 className="darkblueBgTxt">Mobile-Friendly</h4>
                   </div>
                 </Grid>
-                <Grid item xs={3} className="center flex-center">
+                <Grid item xs={6} sm={6} md={3} className="center flex-center">
                   <div className="grid-item">
                     <img src={magnifying} alt="Optimised for Search"/>
                     <h4 className="darkblueBgTxt">Optimised for Search</h4>
@@ -213,8 +214,8 @@ export default function Home() {
       <div className="default-sec-overlay">
         <div className="default-sec-content">
           <div className="default-sec-wrap">
-            <Grid container rowSpacing={2} columns={{ xs: 6, sm: 6, md: 12 }} columnSpacing={{ xs: 6, sm: 6, md: 6 }} className="content-top flex-center">
-              <Grid item xs={3}>
+            <Grid container rowSpacing={2} columnSpacing={{ xs: 6, sm: 6, md: 6 }} className="content-top flex-center">
+              <Grid item xs={12} sm={12} md={3}>
                 <div className="grid-item left-con">
                   <Link to="/"><img src={Logo} alt="Netbloom Logo" className="logo"/></Link>
                   <h2>Case Studies</h2>
@@ -223,7 +224,7 @@ export default function Home() {
                   <Link to="/case-studies" className="gradientButton1 btn">Case Studies</Link>
                 </div>
               </Grid>
-              <Grid item xs={9}>
+              <Grid item xs={12} sm={12} md={9}>
                 <div className="grid-item right-con">
                   <AllCaseStudies/>
                 </div>

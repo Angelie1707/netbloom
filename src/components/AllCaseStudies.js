@@ -26,10 +26,10 @@ export default function AllCaseStudies() {
 
   return (
     <div className="component case-studies">
-      <Grid container rowSpacing={2} columns={{ xs: 6, sm: 6, md: 12 }} columnSpacing={{ xs: 4, sm: 4, md: 4 }} className="content-top flex-center">
+      <Grid container rowSpacing={2} columnSpacing={{ xs: 4, sm: 4, md: 4 }} className="content-top flex-center">
         {allCaseStudiesData &&
           allCaseStudiesData.map((caseStudy, index) => (
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6} md={6}>
               <Link to={"/case-study/" + caseStudy.slug.current} className="cs-block" key={caseStudy.slug.current} title={caseStudy.title}>
                 <img src={caseStudy.mainImage.asset.url} alt="" />
                 <div className="content">

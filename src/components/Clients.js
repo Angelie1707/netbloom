@@ -36,7 +36,7 @@ export default function Clients() {
               spaceBetween={30}
               centeredSlides={true}
               centeredSlidesBounds={true}
-              slidesPerView={10}
+              slidesPerView={4}
               loop={true}
               speed={5000}
               autoplay={{
@@ -45,6 +45,14 @@ export default function Clients() {
               }}
               modules={[Autoplay]}
               className="clients-carousel"
+              breakpoints={{
+                1024: {
+                  slidesPerView: 10,
+                },
+                768: {
+                  slidesPerView: 6,
+                },
+              }}
             >
               {ClientsData &&
                 ClientsData.map((clients, index) => (

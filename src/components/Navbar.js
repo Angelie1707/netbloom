@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from '../assets/Logo-1.webp';
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaBars } from "react-icons/fa";
 
 export default function Navbar() {
+
+  const [showNavbar, setShowNavbar] = useState(false)
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar)
+  }
+
   return (
     <header className="sticky">
       <div className="tob-bar">
@@ -26,33 +32,37 @@ export default function Navbar() {
             <div className="nav-left">
               <Link to="/"><img src={Logo} alt="Netbloom Logo" className="logo"/></Link>
             </div>
-            <div className="nav-mid">
+            <div className={`nav-mid ${showNavbar && 'active'}`}>
               <ul className="main-nav">
-                <li>
+                <li onClick={handleShowNavbar}>
                   <Link to="/">Home</Link>
                 </li>
-                <li>
+                <li onClick={handleShowNavbar}>
                   <Link to="/seo-services-nz">SEO</Link>
                 </li>
-                <li>
+                <li onClick={handleShowNavbar}>
                   <Link to="/web-design-nz">Web Design</Link>
                 </li>
-                <li>
+                <li onClick={handleShowNavbar}>
                   <Link to="/e-commerce-website-nz">E-commerce Website</Link>
                 </li>
-                <li>
+                <li onClick={handleShowNavbar}>
                   <Link to="/about-us">About</Link>
                 </li>
-                <li>
+                <li onClick={handleShowNavbar}>
                   <Link to="/blog">Blog</Link>
                 </li>
-                <li>
+                <li onClick={handleShowNavbar}>
                   <Link to="/contact-us">Contact Us</Link>
+                </li>
+                <li onClick={handleShowNavbar}>
+                  <button className="gradientButton1 btn mobile">Get a Quote</button>
                 </li>
               </ul>
             </div>
             <div className="nav-right">
-              <button className="gradientButton1 btn">Get a Quote</button>
+              <button className="gradientButton1 btn desktop">Get a Quote</button>
+              <div onClick={handleShowNavbar} className="burger-menu"> <FaBars/> </div>
             </div>
           </div>
         </div>
