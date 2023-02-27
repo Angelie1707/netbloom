@@ -46,8 +46,16 @@ export default function Navbar() {
                 <li onClick={handleShowNavbar}>
                   <Link to="/e-commerce-website-nz">E-commerce Website</Link>
                 </li>
-                <li onClick={handleShowNavbar}>
+                <li onClick={handleShowNavbar} className="has-submenu">
                   <Link to="/about-us">About</Link>
+                  <ul className="submenu">
+                    <li onClick={handleShowNavbar}>
+                      <Link to="/portfolio">Portfolio</Link>
+                    </li>
+                    <li onClick={handleShowNavbar}>
+                      <Link to="/case-studies">Case Studies</Link>
+                    </li>
+                  </ul>
                 </li>
                 <li onClick={handleShowNavbar}>
                   <Link to="/blog">Blog</Link>

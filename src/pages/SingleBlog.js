@@ -56,7 +56,7 @@ export default function SingleBlog() {
   let imageUrl = urlFor(blogData.mainImage).url();
 
   return (
-    <div className="singleBlog page">
+    <div className="singleBlog page" key={blogData.slug}>
       <Helmet>
           <title> {blogData.seoTitle ? blogData.seoTitle : blogData.title} </title>
           <meta name="robots" content={blogData.noIndex ? blogData.noIndex : 'index'} />
@@ -100,7 +100,7 @@ export default function SingleBlog() {
             {blogData.categories &&(
                 <ul className="categories" style={{ listStyle: "none" }}>
                     {blogData.categories.map((category, categoriesSlug, i) => (
-                        <li>
+                        <li key={categoriesSlug}>
                           <a href={"/blog/" + categoriesSlug} title={category}>
                             <h3>{category}</h3>
                           </a>
@@ -117,8 +117,8 @@ export default function SingleBlog() {
             <div>
               <BlockContent
                 blocks={blogData.body}
-                projectId={sanityClient.mjyehiv5}
-                dataset={sanityClient.production}
+                projectId={sanityClient.clientConfig.projectId}
+                dataset={sanityClient.clientConfig.dataset}
               />
             </div>
           </div>

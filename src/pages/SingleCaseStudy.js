@@ -100,7 +100,7 @@ export default function SingleCaseStudy() {
             {caseStudiesData.categories &&(
                 <ul className="categories" style={{ listStyle: "none" }}>
                     {caseStudiesData.categories.map((category, categoriesSlug, i) => (
-                        <li>
+                        <li key={categoriesSlug}>
                           <a href={"/caseStudies/" + categoriesSlug} title={category}>
                             <h3>{category}</h3>
                           </a>

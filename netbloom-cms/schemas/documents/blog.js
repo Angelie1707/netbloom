@@ -55,7 +55,13 @@ export default defineType({
       title: 'Body',
       name: 'body',
       type: 'array', 
-      of: [{type: 'block'}]
+      of: [
+      {
+        type: 'block'
+      },
+      {
+        type: 'image'
+      }]
     }),
     {
       name: 'seoTitle',
@@ -65,26 +71,26 @@ export default defineType({
         source: 'title',
       },
       type: 'string',
-      validation: Rule => [
-        Rule.required().min(40).max(50).error('SEO titles between 40 and 50 characters with commonly searched words have the best click-through-rates'),
-      ],
+      // validation: Rule => [
+      //   Rule.required().min(40).max(50).error('SEO titles between 40 and 50 characters with commonly searched words have the best click-through-rates'),
+      // ],
     },
     {
       name: 'seoDescription',
       title: 'SEO Description',
       group: 'seo',
-      validation: Rule => [
-        Rule.required().min(50).max(156).error('Good SEO descriptions utilize keywords, summarize the story and are between 140-156 characters long.'),
-      ],
+      // validation: Rule => [
+      //   Rule.required().min(50).max(156).error('Good SEO descriptions utilize keywords, summarize the story and are between 140-156 characters long.'),
+      // ],
       type: 'text',
     },
     {
       name: "ogTitle",
       title: "Open Graph Title",
       group: 'seo',
-      validation: Rule => [
-        Rule.required().min(40).max(50).error('SEO titles between 40 and 50 characters with commonly searched words have the best click-through-rates'),
-      ],
+      // validation: Rule => [
+      //   Rule.required().min(40).max(50).error('SEO titles between 40 and 50 characters with commonly searched words have the best click-through-rates'),
+      // ],
       type: "string",
     },
     {

@@ -6,6 +6,7 @@ import Logo from '../assets/Logo-1.webp';
 import AllTestimonials from "../components/AllTestimonials.js";
 import AllCaseStudies from "../components/AllCaseStudies.js";
 import Clients from "../components/Clients.js";
+import Faqs from "../components/Faqs.js";
 // import CtaForm from "../components/CtaForm.js";
 // import bannerBg from '../assets/images/digital-marketing-services-dunedin.webp';
 import target from '../assets/icons/target.webp';
@@ -29,6 +30,7 @@ import el8 from '../assets/elements/Polygon 4 (1).webp';
 import el9 from '../assets/elements/Polygon 4 (2).webp';
 import el10 from '../assets/elements/Polygon 3 (2).webp';
 import el11 from '../assets/elements/Polygon 7.webp';
+import el12 from '../assets/elements/Polygon 12.webp';
 import deadline from '../assets/icons/deadline.webp';
 import computer from '../assets/icons/computer.webp';
 import smartphone from '../assets/icons/smartphone.webp';
@@ -211,29 +213,55 @@ export default function Home() {
         </div>
       </div>
       <div className="default-sec case-studies">
-      <div className="default-sec-overlay">
-        <div className="default-sec-content">
-          <div className="default-sec-wrap">
-            <Grid container rowSpacing={2} columnSpacing={{ xs: 6, sm: 6, md: 6 }} className="content-top flex-center">
-              <Grid item xs={12} sm={12} md={3}>
-                <div className="grid-item left-con">
-                  <Link to="/"><img src={Logo} alt="Netbloom Logo" className="logo"/></Link>
-                  <h2>Case Studies</h2>
-                  <p class="sub-head LogoPurpleTxt">Proven results.</p>
-                  <p>We're proud to deliver results to a range of different industries.</p>
-                  <Link to="/case-studies" className="gradientButton1 btn">Case Studies</Link>
-                </div>
+        <div className="default-sec-overlay">
+          <div className="default-sec-content">
+            <div className="default-sec-wrap">
+              <Grid container rowSpacing={2} columnSpacing={{ xs: 6, sm: 6, md: 6 }} className="content-top flex-center">
+                <Grid item xs={12} sm={12} md={3}>
+                  <div className="grid-item left-con">
+                    <Link to="/"><img src={Logo} alt="Netbloom Logo" className="logo"/></Link>
+                    <h2>Case Studies</h2>
+                    <p className="sub-head LogoPurpleTxt">Proven results.</p>
+                    <p>We're proud to deliver results to a range of different industries.</p>
+                    <Link to="/case-studies" className="gradientButton1 btn">Case Studies</Link>
+                  </div>
+                </Grid>
+                <Grid item xs={12} sm={12} md={9}>
+                  <div className="grid-item right-con">
+                    <AllCaseStudies/>
+                  </div>
+                </Grid>
               </Grid>
-              <Grid item xs={12} sm={12} md={9}>
-                <div className="grid-item right-con">
-                  <AllCaseStudies/>
-                </div>
-              </Grid>
-            </Grid>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className="default-sec solutions left">
+        <div className="default-sec-overlay">
+          <div className="default-sec-content main-content max1200">
+            <div className="default-sec-wrap">
+              <Grid container rowSpacing={2} columns={{ xs: 6, sm: 6, md: 12 }} columnSpacing={{ xs: 6, sm: 6, md: 6 }} className="content-top flex-center">
+                <Grid item xs={6}>
+                  <div className="grid-item left-con">
+                    <h2><span>Solutions</span> delivered using the best tools on the best platforms</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
+                    <Link to="/portfolio" className="gradientButton1 btn">Our Portfolio</Link>
+                  </div>
+                </Grid>
+                <Grid item xs={6}>
+                  <div className="grid-item right-con">
+                    
+                  </div>
+                </Grid>
+              </Grid>
+            </div>
+          </div>
+          <div className="elements">
+            <img className="el-12 spin" src={el12} alt="Polygon"/>
+          </div>
+        </div>
+      </div>
+      <Faqs/>
     </div>
   );
 }
