@@ -25,6 +25,8 @@ $logoGradientRight: linear-gradient(93.06deg, #5C81FA 0.55%, #6B1ECE 99.25%);
 $btnGradientBg: linear-gradient(180deg, #040040 0%, #7035EC 100%);
 $overlayGradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 97.4%);
 $greenGradientBg: linear-gradient(180deg, #4ED199 0%, #004AAC 100%);
+$bluePurpleGradient: linear-gradient(90deg, #040040 0%, #440892 100%);
+$footerBg: linear-gradient(180deg, #5C81FA 0%, #440892 100%);
 
 // Animations
 @keyframes spin{
@@ -135,7 +137,7 @@ img{
     justify-content: flex-end;
 }
 
-.MuiGrid-root{
+.stretch{
     margin-top: 0!important;
     display: flex;
     align-items: stretch;
@@ -179,6 +181,20 @@ span.swiper-pagination-bullet-active {
 
     h2, h3{
         color: $white;
+    }
+}
+.bluePurpleGradient{
+    background: $bluePurpleGradient;
+
+    h2, h3, p{
+        color: $white;
+    }
+
+    .btn{
+        background: $white;
+        color: $DarkPurple;
+        font-weight: 900;
+        letter-spacing: 0;
     }
 }
 .whiteBg{
@@ -310,6 +326,41 @@ header{
     }
 }
 
+//Footer
+footer{
+    background: $footerBg;
+    color: $white;
+
+    .social{
+        margin-top: 20px;
+        li{
+            margin-right: 10px;
+        }
+    } 
+
+    h4 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-shadow: $parTextShadow;
+    }
+
+    a {
+        margin: 3px 0;
+        display: inline-block;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    img.logoOverlay {
+        right: 0;
+        bottom: 0;
+    }
+}
+
 
 .page:not(.home) .banner{
     background-color: $lightGray;
@@ -396,6 +447,7 @@ header{
     width: 100%;
     pointer-events: none;
     top: 0;
+    left: 0;
 
     img{
         position: absolute;
@@ -790,6 +842,90 @@ header{
     }
 }
 
+.checklist{
+    .bluePurpleGradient{
+        padding: 80px 60px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn{
+        margin: 30px 0;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+    
+    p{
+        font-size: 24px;
+        margin: 0;
+    }
+    
+    .main-content {
+        padding-top: 40px;
+    }
+
+    .content {
+        z-index: 1;
+        position: relative;
+    }
+
+    .elements{
+
+        img.el-13 {
+            right: -120px;
+            top: -120px;
+        }
+        img.el-15 {
+            left: 18%;
+            bottom: -20px;
+        }
+        img.el-14 {
+            top: -90px;
+            left: 30%;
+        }
+    }
+}
+
+.faqs-section {
+    padding-top: 0;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+    .faqs-accordion {
+        
+        display: block;
+
+        .faqs-accordion:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        .accordion__item {
+            width: calc(50% - 20px);
+            float: left;
+            margin: 10px;
+            border: none;
+            background-color: #f5f5f5;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            overflow: hidden;
+            color: #333;
+
+            .accordion__button {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                
+            }
+        }
+    }
+}
+
 // Single post
 ul.categories {
     display: flex;
@@ -916,6 +1052,11 @@ ul.categories {
     .swiper-pagination {
         display: block;
         bottom: -40px!important;
+    }
+    .faqs-section .faqs-accordion .accordion__item{
+        width: 100%;
+        float: none;
+        margin: 10px 0;
     }
 }
 

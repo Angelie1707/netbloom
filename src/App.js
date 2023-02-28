@@ -2,6 +2,7 @@ import React,{useEffect} from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {Helmet} from "react-helmet";
 import Navbar from "./components/Navbar.js";
+import Footer from "./components/Footer.js";
 import Home from "./pages/Home.js";
 import Blog from "./pages/Blog.js";
 import SingleBlog from "./pages/SingleBlog.js";
@@ -40,6 +41,7 @@ const App = () => {
           <Route element={<SingleCaseStudy/>} path="/case-study/:slug" />
           <Route element={<Faqs/>} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );

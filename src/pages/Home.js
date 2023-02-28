@@ -31,6 +31,9 @@ import el9 from '../assets/elements/Polygon 4 (2).webp';
 import el10 from '../assets/elements/Polygon 3 (2).webp';
 import el11 from '../assets/elements/Polygon 7.webp';
 import el12 from '../assets/elements/Polygon 12.webp';
+import el13 from '../assets/elements/Polygon 9.webp';
+import el14 from '../assets/elements/Polygon 3 (3).webp';
+import el15 from '../assets/elements/Polygon 8.webp';
 import deadline from '../assets/icons/deadline.webp';
 import computer from '../assets/icons/computer.webp';
 import smartphone from '../assets/icons/smartphone.webp';
@@ -125,29 +128,29 @@ export default function Home() {
             <div className="default-sec-wrap">
               <h2 data-aos="fade">Why Trust Netbloom For Your Digital Operations?</h2>
               <p className="sub-head">Quality Leads. Better Conversions.</p>
-              <Grid container rowSpacing={4} columnSpacing={{ xs: 3, sm: 3, md: 3 }}>
-                <Grid item xs={12} sm={6} md={3}>
+              <Grid container rowSpacing={4} columnSpacing={{ xs: 3, sm: 3, md: 3 }}  className="stretch">
+                <Grid item xs={12} sm={6} md={3} className="stretch">
                   <div className="grid-item">
                     <img src={lightbulb} alt="Work With Technical SEO Masters"/>
                     <h4>Work With Technical SEO Masters</h4>
                     <p>Thanks to their experience as Web Developers, our Netbloom professionals can take your technical SEO game to the next level, working with a wide range of online platforms, instead of being limited to the basics, like other marketing agencies.</p>
                   </div>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={3} className="stretch">
                   <div className="grid-item">
                     <img src={dashboard} alt="Access Personalised Dashboard Reports"/>
                     <h4>Access Personalised Dashboard Reports</h4>
                     <p>The more you know about your business, the better you can operate to maximise its value. Connected to multiple data sources, our dashboard reports will offer you all the analytics you need, including keyword position tracking, phone calls from Google Maps, Google analytics, and many more.</p>
                   </div>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={3} className="stretch">
                   <div className="grid-item">
                     <img src={deliveryservice} alt="Enjoy A Service Package Tailored To You"/>
                     <h4>Enjoy A Service Package Tailored To You</h4>
                     <p>Every customer is unique, and so is their business. At Netbloom, we customise our services to your requirements, dreams, and goals, offering fully personalised packages designed to respond to your specific needs.</p>
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid item xs={12} sm={6} md={3} className="stretch">
                   <div className="grid-item">
                     <img src={seo} alt="Find The Solution That Fits Your Budget"/>
                     <h4>Find The Solution That Fits Your Budget</h4>
@@ -258,6 +261,35 @@ export default function Home() {
           </div>
           <div className="elements">
             <img className="el-12 spin" src={el12} alt="Polygon"/>
+          </div>
+        </div>
+      </div>
+      <div className="default-sec checklist left">
+        <div className="default-sec-overlay">
+          <div className="default-sec-content main-content">
+            <div className="default-sec-wrap bluePurpleGradient">
+              <Grid container columns={{ xs: 6, sm: 6, md: 12 }} columnSpacing={{ xs: 6, sm: 6, md: 6 }} className="content flex-center">
+                <Grid item xs={6}>
+                  <div className="grid-item left-con">
+                    <h2>Take Your SEO To New Heights With Our Free Checklist</h2>
+                    <Link to="/checklist" className="gradientButton1 btn">Get the Checklist</Link>
+                  </div>
+                </Grid>
+                <Grid item xs={6}>
+                  <div className="grid-item right-con">
+                    <p>Want to enhance your SEO knowledge and uncover more efficient optimisation tactics? Fill out our form and receive our free SEO checklist! This has been developed to introduce you to the world of search engine optimisation and help you use SEO-focused initiatives to drive traffic to your website, increasing revenue.</p>
+                  </div>
+                </Grid>
+              </Grid>
+              <div className="elements">
+                <img className="el-13" src={el13} alt="Polygon"/>
+                
+                <img className="el-15 spin" src={el15} alt="Polygon"/>
+              </div>
+            </div>
+          </div>
+          <div className="elements">
+            <img className="el-14" src={el14} alt="Polygon"/>
           </div>
         </div>
       </div>
