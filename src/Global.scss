@@ -97,6 +97,7 @@ img{
 
 .App{
     position: relative;
+    min-height: 100vh;
 }
 
 .row {
@@ -330,6 +331,9 @@ header{
 footer{
     background: $footerBg;
     color: $white;
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
 
     .social{
         margin-top: 20px;
@@ -361,6 +365,9 @@ footer{
     }
 }
 
+.page{
+    background-color: $white;
+}
 
 .page:not(.home) .banner{
     background-color: $lightGray;
@@ -1020,6 +1027,12 @@ ul.categories {
     .mobile{
         display: block;
     }
+    footer{
+        position: static;
+    }
+    .default-sec{
+        padding: 50px 0;
+    }
     .testimonial-carousel{
         margin: 0 -80%;
     }
@@ -1053,10 +1066,16 @@ ul.categories {
         display: block;
         bottom: -40px!important;
     }
+    .case-studies .btn{
+        margin: 10px 0 20px 0;
+    }
+    .checklist .bluePurpleGradient {
+        padding: 50px 30px;
+    }
     .faqs-section .faqs-accordion .accordion__item{
         width: 100%;
         float: none;
-        margin: 10px 0;
+        margin: 15px 0;
     }
 }
 
