@@ -1,0 +1,44 @@
+// Colors
+$white: #fff;
+$LogoPurple: #6b1ece;
+$LogoBlue: #5d81fb;
+$Green: #4ed199;
+$Orange: #ff6c5f;
+$NewBlue: #004AAC;
+$NewDarkBlue: #040040;
+$NewPurple: #5c81fa;
+$DarkPurple: #440892;
+$lightGray: #e5e5e5;
+$parText: #000;
+
+// Box Shadow
+$headerShadow1: 0px 4px 10px rgba(0, 0, 0, 0.10);
+$btnShadow1: 0px 0px 20px rgba(112, 53, 236, 0.25);
+
+// Text Shadow
+$h1TextShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$btnTextShadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+$parTextShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+// Backgrounds
+$logoGradientRight: linear-gradient(93.06deg, #5C81FA 0.55%, #6B1ECE 99.25%);
+$btnGradientBg: linear-gradient(180deg, #040040 0%, #7035EC 100%);
+$overlayGradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 97.4%);
+$greenGradientBg: linear-gradient(180deg, #4ED199 0%, #004AAC 100%);
+$bluePurpleGradient: linear-gradient(90deg, #040040 0%, #440892 100%);
+$orangeGradient: linear-gradient(90deg, #040040 0%, #4ED199 100%);
+$footerBg: linear-gradient(180deg, #5C81FA 0%, #440892 100%);
+
+// Animations
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin{
+    animation: spin infinite 20s linear;
+}

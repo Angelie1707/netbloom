@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import sanityClient from "../client.js";
+import client from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import {Helmet} from "react-helmet";
 
-const builder = imageUrlBuilder(sanityClient);
+const builder = imageUrlBuilder(client);
 function urlFor(source) {
   return builder.image(source);
 }
@@ -18,7 +18,7 @@ export default function SingleCaseStudy() {
   const { slug } = useParams();
 
   useEffect(() => {
-    sanityClient
+    client
       .fetch(
         `*[slug.current == $slug]{
           title,
@@ -55,8 +55,11 @@ export default function SingleCaseStudy() {
 
   let imageUrl = urlFor(caseStudiesData.mainImage).url();
 
+  document.body.classList.remove('home','blog', 'main-blog', 'single-blog', 'main-case-study');
+  document.body.classList.add('case-study', 'single-case-study');
+
   return (
-    <div className="SingleCaseStudy page">
+    <div className="SingleCaseStudy page-content">
       <Helmet>
           <title> {caseStudiesData.seoTitle ? caseStudiesData.seoTitle : caseStudiesData.title} </title>
           <meta name="robots" content={caseStudiesData.noIndex ? caseStudiesData.noIndex : 'index'} />
@@ -70,7 +73,7 @@ export default function SingleCaseStudy() {
           <div className="main-content">
             <div className="banner-con">
               <h1>{caseStudiesData.title}</h1>
-              <Breadcrumbs aria-label="breadcrumb" separator="›">
+              <Breadcrumbs aria-label="breadcrumb" separator="›" className="breadcrumb">
                 <Link underline="hover" color="inherit" href="/">
                   Home
                 </Link>
@@ -117,8 +120,8 @@ export default function SingleCaseStudy() {
             <div>
               <BlockContent
                 blocks={caseStudiesData.body}
-                projectId={sanityClient.mjyehiv5}
-                dataset={sanityClient.production}
+                projectId={client.mjyehiv5}
+                dataset={client.production}
               />
             </div>
           </div>

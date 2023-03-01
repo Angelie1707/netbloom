@@ -5,11 +5,15 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import AllBlog from "../components/AllBlog.js";
+import '../assets/css/blog.scss';
 
 export default function Blog() {
 
+  document.body.classList.remove('home', 'single-blog','case-study', 'main-case-study', 'single-case-study');
+  document.body.classList.add('blog', 'main-blog');
+
   return (
-    <div className="blog page">
+    <div className="blog page-content">
       <Helmet>
           <title>Digital Marketing Blog</title>
           <meta name="robots" content="index" />
@@ -23,7 +27,7 @@ export default function Blog() {
           <div className="main-content">
             <div className="banner-con">
               <h1>Digital Marketing Blog</h1>
-              <Breadcrumbs aria-label="breadcrumb" separator="›">
+              <Breadcrumbs aria-label="breadcrumb" separator="›" className="breadcrumb">
                 <Link underline="hover" color="inherit" href="/">
                   Home
                 </Link>

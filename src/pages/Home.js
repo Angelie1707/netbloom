@@ -48,8 +48,12 @@ import magnifying from '../assets/icons/magnifying-glass.webp';
 // };
 
 export default function Home() {
+
+  document.body.classList.remove('blog', 'main-blog', 'single-blog','case-study', 'main-case-study', 'single-case-study');
+  document.body.classList.add('home');
+
   return (
-    <div className="home page">
+    <div className="home page-content">
       <Helmet>
         <title>Netbloom: SEO Services in NZ | Guaranteed Results</title>
         <meta name="robots" content="index" />

@@ -17,6 +17,16 @@ export default function SingleBlog() {
   const [blogData, setBlogData] = useState(null);
   const { slug } = useParams();
 
+  // const [author, setAuthor] = useState([]);
+  // useEffect(() => {
+  //   sanityClient
+  //     .fetch(
+  //       `*[_type = "users"]`,
+  //     )
+  //     .then((data) => setAuthor(data))
+  //     .catch(console.error);
+  // }, []);
+
   useEffect(() => {
     sanityClient
       .fetch(
@@ -42,7 +52,7 @@ export default function SingleBlog() {
             }
           },
           "name": author->name,
-          "authorImage": author->image,
+          "profileImage": author->profileImage,
           noIndex
        }`,
         { slug }
@@ -55,8 +65,11 @@ export default function SingleBlog() {
 
   let imageUrl = urlFor(blogData.mainImage).url();
 
+  document.body.classList.remove('home','main-blog', 'main-case-study', 'case-study', 'single-case-study');
+  document.body.classList.add('blog', 'single-blog');
+
   return (
-    <div className="singleBlog page" key={blogData.slug}>
+    <div className="singleBlog page-content" key={blogData.slug}>
       <Helmet>
           <title> {blogData.seoTitle ? blogData.seoTitle : blogData.title} </title>
           <meta name="robots" content={blogData.noIndex ? blogData.noIndex : 'index'} />
@@ -70,7 +83,7 @@ export default function SingleBlog() {
           <div className="main-content">
             <div className="banner-con">
               <h1>{blogData.title}</h1>
-              <Breadcrumbs aria-label="breadcrumb" separator="›">
+              <Breadcrumbs aria-label="breadcrumb" separator="›" className="breadcrumb">
                 <Link underline="hover" color="inherit" href="/">
                   Home
                 </Link>
@@ -87,10 +100,10 @@ export default function SingleBlog() {
         <div className="default-sec-overlay">
           <div className="default-sec-content">
             <div className="default-sec-wrap">
-              <div>
-                {blogData.authorImage && (
+              <div className="author">
+                {blogData.profileImage && (
                   <img
-                    src={urlFor(blogData.authorImage).width(100).url()}
+                    src={urlFor(blogData.profileImage).width(100).url()}
                     alt={blogData.name}
                   />
                 )}

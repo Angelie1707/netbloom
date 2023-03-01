@@ -1,7 +1,7 @@
 import React,{useEffect} from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {Helmet} from "react-helmet";
-import Navbar from "./components/Navbar.js";
+import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import Home from "./pages/Home.js";
 import Blog from "./pages/Blog.js";
@@ -15,12 +15,16 @@ import Faqs from "./components/Faqs.js";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
-import './Global.scss';
+import './assets/css/global.scss';
+import './assets/js/common.js';
 
 const App = () => {
   useEffect(() => {
     AOS.init();
   }, [])
+
+  document.body.classList.add('page');
+  
   return (
     <div className="App">
       <Helmet>
@@ -29,7 +33,7 @@ const App = () => {
         <title>Netbloom: SEO Services in NZ | Guaranteed Results</title>
       </Helmet>
       <Router>
-        <Navbar/>
+        <Header/>
         <Routes>
           <Route element={<Home/>} path="/" exact />
           <Route element={<Blog/>} path="/blog" />

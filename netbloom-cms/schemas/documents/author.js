@@ -13,7 +13,6 @@ export default defineType({
     defineField({
       title: 'Image',
       name: 'profileImage',
-      type: 'string',
       type: 'image',
       options: {
         hotspot: true,

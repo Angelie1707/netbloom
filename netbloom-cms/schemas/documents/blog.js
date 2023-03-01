@@ -34,7 +34,12 @@ export default defineType({
     defineField({
       title: 'Published at',
       name: 'publishedAt',
-      type: 'datetime',
+      type: 'date',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+        calendarTodayLabel: 'Today'
+      },
+      // hidden: true,
       readOnly: true,
     }),
     defineField({

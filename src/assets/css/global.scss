@@ -1,60 +1,18 @@
-// Colors
-$white: #fff;
-$LogoPurple: #6b1ece;
-$LogoBlue: #5d81fb;
-$Green: #4ed199;
-$Orange: #ff6c5f;
-$NewBlue: #004AAC;
-$NewDarkBlue: #040040;
-$NewPurple: #5c81fa;
-$DarkPurple: #440892;
-$lightGray: #e5e5e5;
-$parText: #000;
-
-// Box Shadow
-$headerShadow1: 0px 4px 10px rgba(0, 0, 0, 0.05);
-$btnShadow1: 0px 0px 20px rgba(112, 53, 236, 0.25);
-
-// Text Shadow
-$h1TextShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-$btnTextShadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-$parTextShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-// Backgrounds
-$logoGradientRight: linear-gradient(93.06deg, #5C81FA 0.55%, #6B1ECE 99.25%);
-$btnGradientBg: linear-gradient(180deg, #040040 0%, #7035EC 100%);
-$overlayGradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 97.4%);
-$greenGradientBg: linear-gradient(180deg, #4ED199 0%, #004AAC 100%);
-$bluePurpleGradient: linear-gradient(90deg, #040040 0%, #440892 100%);
-$footerBg: linear-gradient(180deg, #5C81FA 0%, #440892 100%);
-
-// Animations
-@keyframes spin{
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.spin{
-    animation: spin infinite 20s linear;
-}
-
+@import "./style.scss";
 
 // Global
 *{
-    font-family: "Jost", sans-serif!important;
-    line-height: 1.4;
+    font-family: "Poppins", sans-serif!important;
     box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Jost", sans-serif!important;
 }
 
 p{
    color: $parText; 
    margin: 8px 0;
-   font-weight: 300;
-   font-size: 18px;
 }
 
 h2, h3{
@@ -217,23 +175,45 @@ span.swiper-pagination-bullet-active {
 // Header
 
 header{
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    left: 0;
-    right: 0;
-    // box-shadow: $headerShadow1;
     z-index: 999;
-    top:-32px!important;
+    transition: .3s;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
     
     a{
         display: flex;
         align-items: center;
         color: $parText;
     }
+    .submenu a{
+        color: #000;
+    }
+}
+
+body.sticky-header{
+    header{
+        position: fixed;
+        box-shadow: $headerShadow1;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+
+        .main-nav li a{
+            color: #000;
+        }
+    }
+    .tob-bar{
+        display: none;
+    }
+    .logo{
+        filter: none!important;
+    }
 }
 
 .tob-bar{
     background-color: $DarkPurple;
+    transition: .3s;
 
     .right {
     
@@ -333,7 +313,6 @@ footer{
     color: $white;
     position: sticky;
     bottom: 0;
-    z-index: -1;
 
     .social{
         margin-top: 20px;
@@ -365,25 +344,27 @@ footer{
     }
 }
 
-.page{
+.page-content{
     background-color: $white;
-}
-
-.page:not(.home) .banner{
-    background-color: $lightGray;
-
-    .banner-overlay{
-        background: rgba(255,255,255,.5);
-    }
+    z-index: 1;
+    position: relative;
 }
 
 .banner{
-    height: 300px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
     background-position: center;
+
+    h1{
+        font-weight: 800;
+        font-size: 50px;
+        text-align: center;
+        text-shadow: $h1TextShadow;
+        margin-bottom: 20px;
+    }
 
     .banner-overlay{
         width: 100%;
@@ -391,20 +372,13 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 106px 0 0 0;
+        background: $orangeGradient;
 
         .banner-con{
             max-width: 1040px;
             padding: 0 50px;
             margin: 0 auto;
-
-            h1{
-                font-weight: 800;
-                font-size: 50px;
-                text-align: center;
-                color: $NewDarkBlue;
-                text-shadow: $h1TextShadow;
-                margin-bottom: 20px;
-            }
 
             button{
                 margin-right: 40px;
@@ -685,18 +659,63 @@ footer{
     }
 }
 
+@import "./style.scss";
+
+
+//Common
+body.blog, body.case-study{
+    header{
+        .top-bar{
+            background-color: rgba(0,0,0,.2);
+        }
+        .logo{
+            filter: brightness(9);
+        }
+        .main-nav {
+            a{
+                color: $white;
+            }
+            .submenu a{
+                color: #000;
+            }
+        } 
+    }
+
+    .banner{
+        h1{
+            color: $white;
+        }
+        .breadcrumb li, .breadcrumb p{
+            color: #fff;
+        }
+    }
+
+    .component {
+        h1 {
+            font-size: 30px!important;
+            font-weight: normal;
+        }
+    }
+
+}
+
+.readmore{
+    color: $DarkPurple;
+}
+
 
 // Home
 .home{
     .banner {
-        height: calc(100vh - 100px);
+        height: calc(100vh);
         position: relative;
         overflow: hidden;
 
         .banner-overlay{
             display: flex;
             align-items: center;
-            padding: 0 0 100px 0;
+            padding: 100px 0;
+            background: transparent;
         
             .banner-con{
                 max-width: 980px;
@@ -746,7 +765,7 @@ footer{
             }
             
             img.el-3 {
-                top: -10%;
+                top: 0;
                 left: 60%;
             }
             
@@ -756,7 +775,7 @@ footer{
             }
             
             img.el-5 {
-                top: 0;
+                top: 10%;
                 left: 85%;
             }
             
@@ -801,12 +820,14 @@ footer{
 
         h4{
             color: $Green;
-            font-size: 18px;
+            font-size: 20px;
             margin: 15px 0;
         }
 
         p{
             color: $white;
+            font-weight: 300;
+            font-size: 14px;
         }
     }
 
@@ -984,10 +1005,10 @@ ul.categories {
     }
     .nav-mid {
         position: fixed;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 70px);
         width: 100%;
         left: 0;
-        top: 100px;
+        top: 70px;
         z-index: 999;
         background: $NewDarkBlue;
         transition: .3s;
@@ -1030,9 +1051,6 @@ ul.categories {
     footer{
         position: static;
     }
-    .default-sec{
-        padding: 50px 0;
-    }
     .testimonial-carousel{
         margin: 0 -80%;
     }
@@ -1051,6 +1069,9 @@ ul.categories {
     .main-nav .btn {
         background: #fff;
         color: $NewDarkBlue;
+    }
+    .banner .banner-overlay .banner-con{
+        padding: 0;
     }
     .testimonial-carousel .slide-item{
         padding: 20px;
@@ -1097,6 +1118,7 @@ ul.categories {
     
     .tob-bar .right ul {
         justify-content: center;
+        flex-wrap: wrap;
     }
     
 }
