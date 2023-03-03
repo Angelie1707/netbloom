@@ -137,11 +137,19 @@ span.swiper-pagination-bullet-active {
 }
 .darkblueBg{
     background-color: $NewDarkBlue;
+}
+.darkPurpleBg{
+    background-color: $DarkPurple;
+}
+.darkblueBg, .darkPurpleBg{
 
     h2, h3{
         color: $white;
     }
 }
+    
+
+
 .bluePurpleGradient{
     background: $bluePurpleGradient;
 
@@ -557,6 +565,9 @@ footer{
         p{
             font-size: 20px;
         }
+        .left-con {
+            padding-top: 10px;
+        }
     }
 
     .content-bot {
@@ -603,6 +614,10 @@ footer{
 
     .btn{
         margin-top: 30px;
+    }
+
+    h1{
+        color: $white;
     }
 
     a.cs-block {
@@ -811,7 +826,7 @@ body.blog, body.case-study{
 }
 
 .why-trust{
-    background: linear-gradient(180deg, #040040 0%, #440892 100%), #040040;
+    background: linear-gradient(180deg, #440892 0%, #e5e4e4 100%), #440892;
 
     .grid-item{
         background: rgba(255, 255, 255, 0.02);

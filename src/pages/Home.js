@@ -25,8 +25,8 @@ import el3 from '../assets/elements/Polygon 3.webp';
 import el4 from '../assets/elements/Polygon 4.webp';
 import el5 from '../assets/elements/Polygon 5.webp';
 import el6 from '../assets/elements/Polygon 6.webp';
-import el7 from '../assets/elements/Polygon 3 (1).webp';
-import el8 from '../assets/elements/Polygon 4 (1).webp';
+// import el7 from '../assets/elements/Polygon 3 (1).webp';
+// import el8 from '../assets/elements/Polygon 4 (1).webp';
 import el9 from '../assets/elements/Polygon 4 (2).webp';
 import el10 from '../assets/elements/Polygon 3 (2).webp';
 import el11 from '../assets/elements/Polygon 7.webp';
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="default-sec results-driven center darkblueBg">
+      <div className="default-sec results-driven center darkPurpleBg">
         <div className="default-sec-overlay">
           <div className="default-sec-content main-content">
             <div className="default-sec-wrap max1200">
@@ -118,10 +118,10 @@ export default function Home() {
               </Grid>
             </div>
           </div>
-          <div className="elements">
+          {/* <div className="elements">
             <img className="el-7 spin" src={el7} alt="Polygon"/>
             <img className="el-8 spin" src={el8} alt="Polygon"/>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="default-sec why-trust bg-sec center">
@@ -172,7 +172,7 @@ export default function Home() {
         <div className="default-sec-overlay">
           <div className="default-sec-content main-content max1200">
             <div className="default-sec-wrap">
-              <Grid container rowSpacing={2} columns={{ xs: 6, sm: 6, md: 12 }} columnSpacing={{ xs: 6, sm: 6, md: 6 }} className="content-top flex-center">
+              <Grid container rowSpacing={2} columns={{ xs: 6, sm: 6, md: 12 }} columnSpacing={{ xs: 6, sm: 6, md: 6 }} className="content-top">
                 <Grid item xs={6}>
                   <div className="grid-item left-con">
                     <h2>Are You Ready To Establish Your Presence In The Digital World?</h2>
