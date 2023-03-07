@@ -10,6 +10,7 @@ import AllBlog from "./components/AllBlog.js";
 import AllTestimonials from "./components/AllTestimonials.js";
 import CaseStudies from "./pages/CaseStudies.js";
 import AllCaseStudies from "./components/AllCaseStudies.js";
+import AllCaseStudiesCarousel from "./components/AllCaseStudiesCarousel.js";
 import SingleCaseStudy from "./pages/SingleCaseStudy.js";
 import Faqs from "./components/Faqs.js";
 import AOS from 'aos';
@@ -42,6 +43,7 @@ const App = () => {
           <Route element={<AllTestimonials/>} path="/testimonials" />
           <Route element={<CaseStudies/>} path="/case-studies" />
           <Route element={<AllCaseStudies/>} />
+          <Route element={<AllCaseStudiesCarousel/>} />
           <Route element={<SingleCaseStudy/>} path="/case-study/:slug" />
           <Route element={<Faqs/>} />
         </Routes>

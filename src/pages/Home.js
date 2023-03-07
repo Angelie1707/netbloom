@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import {Helmet} from "react-helmet";
 import Logo from '../assets/Logo-1.webp';
 import AllTestimonials from "../components/AllTestimonials.js";
-import AllCaseStudies from "../components/AllCaseStudies.js";
+import AllCaseStudiesCarousel from "../components/AllCaseStudiesCarousel.js";
 import Clients from "../components/Clients.js";
 import Faqs from "../components/Faqs.js";
 // import CtaForm from "../components/CtaForm.js";
@@ -230,12 +230,12 @@ export default function Home() {
                     <h2>Case Studies</h2>
                     <p className="sub-head LogoPurpleTxt">Proven results.</p>
                     <p>We're proud to deliver results to a range of different industries.</p>
-                    <Link to="/case-studies" className="gradientButton1 btn">Case Studies</Link>
+                    <Link to="/case-studies" className="gradientButton1 btn">See more Case Studies</Link>
                   </div>
                 </Grid>
                 <Grid item xs={12} sm={12} md={9}>
                   <div className="grid-item right-con">
-                    <AllCaseStudies/>
+                    <AllCaseStudiesCarousel/>
                   </div>
                 </Grid>
               </Grid>
