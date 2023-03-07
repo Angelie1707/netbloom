@@ -39,6 +39,12 @@ export default defineType({
       title: 'Published at',
       name: 'publishedAt',
       type: 'datetime',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+        calendarTodayLabel: 'Today'
+      },
+      // hidden: true,
+      readOnly: true,
     }),
     defineField({
       title: 'Categories',
@@ -155,7 +161,7 @@ export default defineType({
     select: {
       title: 'title',
       author: 'author.name',
-      media: 'mainImage',
+      media: 'clientLogo',
     },
     prepare(selection) {
       const {author} = selection
