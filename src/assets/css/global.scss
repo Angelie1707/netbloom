@@ -667,6 +667,14 @@ footer{
                     .content{
                         height: 400px;
                         position: relative;
+                        background: rgba(0,0,0,.7);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        h3.heading {
+                            font-size: 120px;
+                        }
                     }
                     img.main-img{
                         position: absolute;
@@ -675,6 +683,19 @@ footer{
                         width: 100%;
                         height: 100%;
                     }
+                }
+            }
+            .content-right {
+                padding: 50px 40px;
+                position: relative;
+                .client{
+                    padding-bottom: 20px;
+                }
+                a.readmore {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 40px;
+                    color: #fff;
                 }
             }
         }
@@ -760,7 +781,8 @@ body.blog, body.case-study{
             display: flex;
             align-items: center;
             padding: 100px 0;
-            background: transparent;
+            background: rgba(255, 255, 255, .8);
+            z-index: 1;
         
             .banner-con{
                 max-width: 980px;
@@ -856,7 +878,7 @@ body.blog, body.case-study{
 }
 
 .why-trust{
-    background: linear-gradient(180deg, #440892 0%, #e5e4e4 100%), #440892;
+    background: linear-gradient(180deg, #440892 0%, #adadad 100%), #440892;
 
     .grid-item{
         background: rgba(255, 255, 255, 0.02);

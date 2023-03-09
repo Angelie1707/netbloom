@@ -77,15 +77,15 @@ export default function Home() {
           <div className="clients">
             <Clients/>
           </div>
-          <div className="elements">
-            <img className="el-1" src={el1} alt="Web Design"/>
-            <img className="el-2" src={el2} alt="Web Design"/>
-            <img className="el-3" src={el3} alt="Web Design"/>
-            <img className="el-4 spin" src={el4} alt="Web Design"/>
-            <img className="el-5 spin" src={el5} alt="Web Design"/>
-            <img className="el-6" src={el6} alt="Web Design"/>
-          </div>
         </div>
+        <div className="elements">
+          <img className="el-1" src={el1} alt="Web Design"/>
+          <img className="el-2" src={el2} alt="Web Design"/>
+          <img className="el-3" src={el3} alt="Web Design"/>
+          <img className="el-4 spin" src={el4} alt="Web Design"/>
+          <img className="el-5 spin" src={el5} alt="Web Design"/>
+          <img className="el-6" src={el6} alt="Web Design"/>
+          </div>
       </div>
       <div className="default-sec results-driven center darkPurpleBg">
         <div className="default-sec-overlay">

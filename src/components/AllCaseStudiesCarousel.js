@@ -80,7 +80,7 @@ export default function AllCaseStudiesCarousel() {
                 <Grid item xs={12} sm={6} md={4} className="content-right">
                   <h4 className="client whiteTxt">{caseStudy.title}</h4>
                   <p className="testimonial whiteTxt">{caseStudy.testimonial}</p>
-                  <Link to={"/case-study/" + caseStudy.slug.current} className="whiteTxt" title={caseStudy.title}>Read more ›</Link>
+                  <Link to={"/case-study/" + caseStudy.slug.current} className="readmore whiteTxt" title={caseStudy.title}>Read more ›</Link>
                 </Grid>
               </Grid>
             </SwiperSlide>
