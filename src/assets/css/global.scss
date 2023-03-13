@@ -881,7 +881,7 @@ body.blog, body.case-study{
     background: linear-gradient(180deg, #440892 0%, #adadad 100%), #440892;
 
     .grid-item{
-        background: rgba(255, 255, 255, 0.02);
+        background: hsl(0deg 0% 0% / 8%);
         backdrop-filter: blur(5px);
         padding: 40px;
 
