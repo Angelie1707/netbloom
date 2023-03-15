@@ -38,6 +38,7 @@ import deadline from '../assets/icons/deadline.webp';
 import computer from '../assets/icons/computer.webp';
 import smartphone from '../assets/icons/smartphone.webp';
 import magnifying from '../assets/icons/magnifying-glass.webp';
+import logos from '../assets/solution.png'
 
 
 // const banner = {
@@ -257,7 +258,7 @@ export default function Home() {
                 </Grid>
                 <Grid item xs={6}>
                   <div className="grid-item right-con">
-                    
+                  <img src={logos} alt="Multiple-logos" />
                   </div>
                 </Grid>
               </Grid>
