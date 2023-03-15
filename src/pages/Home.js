@@ -40,7 +40,6 @@ import smartphone from '../assets/icons/smartphone.webp';
 import magnifying from '../assets/icons/magnifying-glass.webp';
 import logos from '../assets/solution.png'
 
-
 // const banner = {
 //   backgroundImage: `url(${bannerBg})`,
 //   backgroundPosition: 'center',
