@@ -854,6 +854,17 @@ body.blog, body.case-study{
     }
 }
 
+.category-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    button{
+        margin-right: 20px;
+        color: #FFF;
+        background: linear-gradient(180deg, #040040 0%, #7035EC 100%);
+    }
+}
+
 .results-driven{
     .grid-item{
         width: 100%;

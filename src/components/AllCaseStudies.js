@@ -26,19 +26,19 @@ export default function AllCaseStudies() {
 
   return (
     <div className="component list">
-      <Grid container rowSpacing={{ xs: 2, sm: 4, md: 6 }} columnSpacing={{ xs: 2, sm: 4, md: 6 }} className="content-top flex-center">
-        {allCaseStudiesData &&
-          allCaseStudiesData.map((caseStudy, index) => (
-            <Grid item xs={12} sm={6} md={6} key={caseStudy.slug.current} className="stretch">
-              <Link to={"/case-study/" + caseStudy.slug.current} className="cs-block" title={caseStudy.title}>
+      <Grid container rowSpacing={{ xs: 2, sm: 4, md: 6 }} columnSpacing={{ xs: 2, sm: 3, md: 6 }} className="content-top flex-center">
+        {allCaseStudiesData&&
+          allCaseStudiesData.map( ( caseStudy, index ) => (
+            <Grid item xs={12} sm={6} md={5} lg={5} xl={5} key={caseStudy.slug.current} className="stretch">
+              <Link to={"/case-study/"+caseStudy.slug.current} className="cs-block" title={caseStudy.title}>
                 <img src={caseStudy.mainImage.asset.url} alt={caseStudy.title} />
                 <div className="content">
                   <h1>{caseStudy.title}</h1>
-                  <Link to={"/case-study/" + caseStudy.slug.current} className="whiteTxt" title={caseStudy.title}>Read more ›</Link>
+                  <Link to={"/case-study/"+caseStudy.slug.current} className="whiteTxt" title={caseStudy.title}>Read more ›</Link>
                 </div>
               </Link>
             </Grid>
-        ))}
+          ) )}
       </Grid>
     </div>
   );
