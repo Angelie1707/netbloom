@@ -3,6 +3,20 @@ import React from 'react'
 import { Helmet } from 'react-helmet';
 import "../assets/css/blog.scss";
 import "../assets/css/seo.scss";
+import projectsupport from '../assets/icons/projectsupport.png'
+import consultancy from '../assets/icons/consultancy.png'
+import ongoing from '../assets/icons/ongoing.png'
+import browser from '../assets/icons/browser.png'
+import target from '../assets/icons/target.png'
+import contentmanagement from '../assets/icons/content-management.png'
+import seo from '../assets/icons/seo.png'
+import ecommerce from '../assets/icons/ecommerce.png'
+import link from '../assets/icons/ecommerce.png'
+import statistics from '../assets/icons/statistics.png'
+import wrench from '../assets/icons/wrench.png'
+import search from '../assets/icons/search.png'
+import developing from '../assets/icons/developing.png'
+
 
 const SEOService = () => {
   document.body.classList.remove(
@@ -85,6 +99,200 @@ const SEOService = () => {
             <h3>6.</h3>
             <Typography variant="h4" className='text'>International SEO</Typography>
             <Typography className='text'>International SEO is an intricate field in the SEO sphere, and it requires careful planning and technical know-how of content and configurations. It would help if you designed a market-specific plan for your website to meet customer needs and keep track of your stats to ensure all traffic is coming from the right places. We can help you reach your goals by improving your website performance. We can help you with a multiverse of SEO challenges. We have everything if you need project support, consultancy, project management, or hands-on implementation.</Typography>
+          </Grid>
+        </Grid>
+        <Grid container spacing={6} className="text-point support_wp">
+          <Grid item xs={12} className="inner-text-point-left" >
+            <h3>We can support you with our Holistic SEO approach to move the needle for your company forward</h3>
+            <Typography className='text'>Whether you are looking for a short term or one-off SEO project, consultancy, or long-term SEO support, we can support you different SEO services that you need.</Typography>
+          </Grid>
+          <Grid item xs={6} className="inner-text-point-left One_off_project" >
+            <h3>One-off Project Support</h3>
+            <Typography className='text'>If you do not have the resources, we can provide you with the needed assistance to complete your project. We offer technical SEO support and conduct audits for your organisation, irrespective of size. Besides, we help rebuild your website or update it. Our team has experience working with many clients, with an impressive track record of success.</Typography>
+            <button className='gradientButton1 btn btn_support desktop'>In need of an audit</button>
+          </Grid>
+          <Grid item xs={6} className="inner-text-point-right">
+            <img className='maximg_seo' src={projectsupport} />
+          </Grid>
+          <Grid item xs={6} className="inner-text-point-right right_img_provide">
+            <img className='maximg_seo' src={consultancy} />
+          </Grid>
+          <Grid item xs={6} className="inner-text-point-left seo_consultancy" >
+            <h3>SEO Consultancy</h3>
+            <Typography className='text'>Do you want to know whether the strategy employed by your in-house team is working or not? Let our SEO experts help you better understand your in-house team’s work. We will serve as your outside perspective and give you our unbiased opinion.</Typography>
+            <button className='gradientButton1 btn btn_support desktop'>In need of a consultant</button>
+          </Grid>
+          <Grid item xs={6} className="inner-text-point-left One_off_project" >
+            <h3>Ongoing Support and Implementation</h3>
+            <Typography className='text'>SEO changes are fast-paced, making it harder to keep up with the latest trends. We can handle all your technical analysis and development needs while you focus on more pressing matters you need to do.</Typography>
+            <button className='gradientButton1 btn btn_support desktop'>In need of a support</button>
+          </Grid>
+          <Grid item xs={6} className="inner-text-point-right">
+            <img className='maximg_seo' src={ongoing} />
+          </Grid>
+        </Grid>
+        <Grid container spacing={6} className="text-point common_wp">
+          <Grid item xs={12} className="inner-text-point-left" >
+            <h3>Why choose Netbloom?</h3>
+            <Typography className='text_common'>One common issue raised by our clients is their desire to increase their website traffic through search engine optimisation. Whereas some do not know how to begin, some clients do not know what SEO is.</Typography>
+            <Typography className='text_common'>Regardless of our client’s knowledge about SEO, the first step we will take is a complete technical analysis of their website. We need to know the issues that need to be addressed. From there, we can start scaling your ranking for your desired keywords.</Typography>
+            <Typography className='text_common'>Netbloom will give you any kind of assistance you will require, big or small; we are here to offer solutions to your problems. We will be upfront and discuss the current state of your SEO practices. Any issues affecting your website performance that we can find during our analysis will be coursed to you, and find ways to fix them as soon as possible.</Typography>
+            <Typography className='text_common'>Working on SEO is not without risks. Hence, we ensure that your business is fully aware of the impact of uncertain targets or time-sensitive projects. We want you to be well-informed, and we are always happy to explain our work—from beginning to end.</Typography>
+          </Grid>
+        </Grid>
+        <Grid container spacing={6} className="text-point grow_businesses">
+          <Grid item xs={12} className="grow_title inner-text-point-left" >
+            <h3>How We Grow Businesses</h3>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={browser} />
+              </div>
+              <div className='grow_name'>
+                <h4>Competitor Assessment</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={target} />
+              </div>
+              <div className='grow_name'>
+                <h4>Target Market Analysis</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={browser} />
+              </div>
+              <div className='grow_name'>
+                <h4>Traffic Analytics</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={ongoing} />
+              </div>
+              <div className='grow_name'>
+                <h4>Content Topic Ideation</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={contentmanagement} />
+              </div>
+              <div className='grow_name'>
+                <h4>Content Creation</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={projectsupport} />
+              </div>
+              <div className='grow_name'>
+                <h4>Content Creation</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={seo} />
+              </div>
+              <div className='grow_name'>
+                <h4>Custom SEO strategy</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={ecommerce} />
+              </div>
+              <div className='grow_name'>
+                <h4>Custom SEO strategy</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={seo} />
+              </div>
+              <div className='grow_name'>
+                <h4>Local SEO</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={link} />
+              </div>
+              <div className='grow_name'>
+                <h4>Link Building</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={statistics} />
+              </div>
+              <div className='grow_name'>
+                <h4>Dashboard reporting</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={wrench} />
+              </div>
+              <div className='grow_name'>
+                <h4>Monthly updates</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={search} />
+              </div>
+              <div className='grow_name'>
+                <h4>Keyword Research</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={developing} />
+              </div>
+              <div className='grow_name'>
+                <h4>Website audit</h4>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grow_list" >
+            <div className='grow_inner'>
+              <div className='grow_icon'>
+                <img src={statistics} />
+              </div>
+              <div className='grow_name'>
+                <h4>Technical analysis</h4>
+              </div>
+            </div>
           </Grid>
         </Grid>
       </div>
